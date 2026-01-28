@@ -114,11 +114,11 @@ function checkCheckboxSubtaskTaskDetail(subtaskID, subtaskContent) {
 function colorLabelTaskDetails(taskContent, taskID) {
   let labelElement = document.getElementById("category_label_task_details_" + taskID)
   if (taskContent.category === "Technical Task") {
-    labelElement.style.backgroundColor = '#0038FF';
+    labelElement.style.backgroundColor = '#781ad7';
   } else if (taskContent.category === "User Story") {
-    labelElement.style.backgroundColor = '#1FD7C1';
+    labelElement.style.backgroundColor = '#1fd7c1';
   } else {
-    labelElement.style.backgroundColor = '#ff00d9';
+    labelElement.style.backgroundColor = '#e879f9';
   }
 }
 

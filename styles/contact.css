@@ -121,7 +121,7 @@
 
 .contact_person:not(.active_contact):hover {
     color: white;
-    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+    background: #f3f3f3;
 }
 
 .initals {
@@ -135,7 +135,6 @@
     font-size: 16px;
     border-radius: 45px;
     color: white;
-    background-color: #ffa800;
     border: 2px solid white;
     font-weight: normal;
 }
@@ -150,7 +149,6 @@
     aspect-ratio: 1 / 1;
     border-radius: 70px;
     color: white;
-    background-color: #ffa800;
     border: 3.5px solid white;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     transition-property: all;

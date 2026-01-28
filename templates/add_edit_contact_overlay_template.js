@@ -2,7 +2,7 @@ function addContactTemplate() {
     return `
         <main class="contact_overlay_wrapper">
             <section class="contact_left_container">
-                <img class="logo_overlay" src="./assets/img/logo_version2.svg" alt="Join Logo">
+                <img class="logo_overlay" src="./assets/img/logo_version_2.svg" alt="Join Logo">
                 <span class="headline_overlay">Add Contact</span>
                 <span class="subhead_overlay">Tasks are better with a team!</span>
                 <hr class="hr_overlay">
@@ -45,7 +45,7 @@ function editContactTemplate(c) {
     return `
         <main class="contact_overlay_wrapper">
             <section class="contact_left_container">
-                <img class="logo_overlay" src="./assets/img/logo_version2.svg" alt="Join Logo">
+                <img class="logo_overlay" src="./assets/img/logo_version_2.svg" alt="Join Logo">
                 <span class="headline_overlay">Edit Contact</span>
                 <hr class="hr_overlay">
             </section>

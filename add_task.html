@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/standard.css" />
-    <link rel="stylesheet" href="./styles/sidebar.css" />
-    <link rel="stylesheet" href="./styles/sidebar_nav_main.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/sidebar_nav_main.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/add_task.css" />
-    <link rel="stylesheet" href="./styles/add_task_dropdowns.css" />
+    <link rel="stylesheet" href="./styles/add_task.css">
+    <link rel="stylesheet" href="./styles/add_task_dropdowns.css">
     <link rel="stylesheet" href="./styles/mobile_footer.css">
     <link rel="stylesheet" href="./styles/toastmessage.css">
     <link rel="stylesheet" href="./styles/mobile_add_task.css">
@@ -26,14 +25,11 @@
     <script src="./scripts/variables.js" defer></script>
     <title>Add Task</title>
 </head>
-
 <body onload="initAddTask()">
     <div class="order_sidebar_main">
-        <aside class="sidebar desktop" id="id_sidebar">
-        </aside>
+        <aside class="sidebar desktop" id="id_sidebar"></aside>
         <div class="nav_main_content">
-            <nav class="nav_bar" id="id_navbar">
-            </nav>
+            <nav class="nav_bar" id="id_navbar"></nav>
             <main>
                 <form class="add_task_main_content content_wrapper" id="addTaskForm" novalidate>
                     <div>
@@ -43,73 +39,49 @@
                         <section class="formfield_left">
                             <div class="formfield_left_wrapper">
                                 <label for="id_title_add_task_default" class="label_text">Title<sup>*</sup></label><br>
-                                <input type="text" class="add_task_input styled_input validate_required"
-                                    id="id_title_add_task_default" placeholder="Enter a title"
-                                    oninput="handleRequiredMessage(this); limitInputLength(this, 30)"
-                                    onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
-                                <span class="required_message" data-for="id_title_add_task_default">This field is
-                                    required</span><br>
+                                <input type="text" class="add_task_input styled_input validate_required" id="id_title_add_task_default" placeholder="Enter a title" oninput="handleRequiredMessage(this); limitInputLength(this, 30)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
+                                <span class="required_message" data-for="id_title_add_task_default">This field is required</span><br>
                             </div>
                             <label for="id_description_add_task_default" class="label_text">Description</label><br>
-                            <textarea class="add_task_description styled_input_description"
-                                id="id_description_add_task_default" placeholder="Enter a description"
-                                oninput="limitInputLength(this, 90)"></textarea><br>
-
+                            <textarea class="add_task_description styled_input_description" id="id_description_add_task_default" placeholder="Enter a description" oninput="limitInputLength(this, 90)"></textarea><br>
                             <div class="formfield_left_wrapper">
-                                <label for="id_due_date_add_task_default" class="label_text">Due
-                                    Date<sup>*</sup></label><br>
-                                <input type="date" class="add_task_input styled_input validate_required"
-                                    id="id_due_date_add_task_default" oninput="handleRequiredMessage(this)"
-                                    onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
-                                <span class="required_message" data-for="id_due_date_add_task_default">This field is
-                                    required</span><br>
+                                <label for="id_due_date_add_task_default" class="label_text">Due Date<sup>*</sup></label><br>
+                                <input type="date" class="add_task_input styled_input validate_required" id="id_due_date_add_task_default" oninput="handleRequiredMessage(this)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
+                                <span class="required_message" data-for="id_due_date_add_task_default">This field is required</span><br>
                             </div>
                         </section>
                         <div class="vertical_line"></div>
                         <section class="formfield_right">
                             <label class="label_text ">Priority<sup class="hidden_sup">*</sup></label><br>
                             <div class="priority_options">
-                                <button type="button" class="urgent_btn_default" id="id_urgent_btn_default"
-                                    onclick="checkPriority('urgent', 'default')">Urgent
-                                    <img id="id_icon_urgent_task_default" src="./assets/img/prio_urgent_red.svg"
-                                        alt="Priority Urgent">
+                                <button type="button" class="urgent_btn_default" id="id_urgent_btn_default" onclick="checkPriority('urgent', 'default')">Urgent
+                                    <img id="id_icon_urgent_task_default" src="./assets/img/prio_urgent_red.svg" alt="Priority Urgent">
                                 </button>
-                                <button type="button" class="medium_btn_filled" id="id_medium_btn_default"
-                                    onclick="checkPriority('medium', 'default' )">Medium
-                                    <img id="id_icon_medium_task_default" class="icon hover"
-                                        src="./assets/img/prio_medium_white.svg" alt="Priority Medium Hover">
+                                <button type="button" class="medium_btn_filled" id="id_medium_btn_default" onclick="checkPriority('medium', 'default')">Medium
+                                    <img id="id_icon_medium_task_default" class="icon hover" src="./assets/img/prio_medium_white.svg" alt="Priority Medium Hover">
                                 </button>
-                                <button type="button" class="low_btn_default" id="id_low_btn_default"
-                                    onclick="checkPriority('low', 'default')">Low
-                                    <img id="id_icon_low_task_default" src="./assets/img/prio_low_green.svg"
-                                        alt="Priority Low">
+                                <button type="button" class="low_btn_default" id="id_low_btn_default" onclick="checkPriority('low', 'default')">Low
+                                    <img id="id_icon_low_task_default" src="./assets/img/prio_low_green.svg" alt="Priority Low">
                                 </button>
                             </div>
                             <label class="label_text">Assigned to</label><br>
                             <div class="dropdown" data-type="contacts">
-                                <div class="dropdown_input add_task_input_dropdown styled_input"
-                                    onclick="toggleListTasks('contacts', 'default')">
-                                    <span class="dropdown_text" id="selected_contacts_default">Select contacts to
-                                        assign</span>
+                                <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('contacts', 'default')">
+                                    <span class="dropdown_text" id="selected_contacts_default">Select contacts to assign</span>
                                     <div class="dropdown_icon"></div>
                                 </div>
-                                <ul class="dropdown_list_contacts" id="contacts_list_task_default"
-                                    style="display:none;">
-                                </ul>
+                                <ul class="dropdown_list_contacts" id="contacts_list_task_default" style="display:none;"></ul>
                             </div>
                             <div class="assigned_contacts_row" id="assigned_contacts_row_default"></div>
                             <div class="input_spacer"></div>
                             <label class="label_text">Category<sup>*</sup></label><br>
                             <div class="dropdown" data-type="category">
-                                <div class="dropdown_input add_task_input_dropdown styled_input"
-                                    onclick="toggleListTasks('category', 'default')">
-                                    <span class="dropdown_text" id="selected_category_default">Select task
-                                        category</span>
+                                <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('category', 'default')">
+                                    <span class="dropdown_text" id="selected_category_default">Select task category</span>
                                     <div class="dropdown_icon"></div>
                                 </div>
                                 <ul class="dropdown_list" id="category_list_task_default" style="display:none;">
-                                    <li class="dropdown_item" onclick="selectCategory(this, 'default')">Technical Task
-                                    </li>
+                                    <li class="dropdown_item" onclick="selectCategory(this, 'default')">Technical Task</li>
                                     <li class="dropdown_item" onclick="selectCategory(this, 'default')">User Story</li>
                                 </ul>
                             </div>
@@ -117,17 +89,14 @@
                             <section class="subtask_wrapper">
                                 <label for="subtasks" class="label_text">Subtasks</label><br>
                                 <div class="input_container">
-                                    <input type="text" id="subtasks" class="add_task_input styled_input"
-                                        placeholder="Add new subtask" oninput="limitInputLength(this, 20)">
+                                    <input type="text" id="subtasks" class="add_task_input styled_input" placeholder="Add new subtask" oninput="limitInputLength(this, 20)">
                                     <div class="subtask_actions">
                                         <button class="subtask_btn" type="button" onclick="cancelSubtask()">
-                                            <img class="cancel_subtask" src="./assets/img/close.svg"
-                                                alt="Cancel Subtask">
+                                            <img class="cancel_subtask" src="./assets/img/close.svg" alt="Cancel Subtask">
                                         </button>
                                         <div class="subtask_divider"></div>
                                         <button class="subtask_btn" type="button" onclick="addSubtask()">
-                                            <img class="submit_subtask" src="./assets/img/check.svg"
-                                                alt="Submit Subtask">
+                                            <img class="submit_subtask" src="./assets/img/check.svg" alt="Submit Subtask">
                                         </button>
                                     </div>
                                 </div>
@@ -145,8 +114,7 @@
                                 <img class="icon default" src="./assets/img/close.svg" alt="Clear Formular">
                                 <img class="icon hover" src="./assets/img/close_blue.svg" alt="Clear Formular Hover">
                             </button>
-                            <button type="submit" id="id_btn_create_task_default" class="create_task_btn">Create
-                                Task<img src="./assets/img/check_white.svg" alt="Create Task"></button>
+                            <button type="submit" id="id_btn_create_task_default" class="create_task_btn">Create Task<img src="./assets/img/check_white.svg" alt="Create Task"></button>
                         </div>
                     </div>
                 </form>
@@ -155,6 +123,7 @@
         </div>
     </div>
     <div id="msgBox" class="toast_message toast_message_board">
-        <p>Task added to board</p> <img src="./assets/img/board_icon.svg" alt="a board icon">
+        <p>Task added to board</p><img src="./assets/img/board_icon.svg" alt="">
     </div>
 </body>
+</html>

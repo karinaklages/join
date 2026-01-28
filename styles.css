@@ -104,6 +104,8 @@ button {
   
 }
 
+/* MOBILE */
+
 @media (max-width:1350px) {
   .margin_left {
     margin-left: 50px;

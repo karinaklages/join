@@ -20,11 +20,13 @@ h3 {
   font-weight: 700;
 }
 
-.legal_privacy_h3 {
+.legal_privacy_h3,
+.legal_notice_h3 {
   font-family: 'latin_700';
   font-weight: 700;
   font-size: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 .pp_h4 {
@@ -38,6 +40,11 @@ h3 {
   font-family: 'latin_700';
   font-weight: 700;
   font-size: 16px;
+}
+
+.privacy_link {
+  color: #29abe2;
+  text-decoration: none;
 }
 
 /* LISTS */

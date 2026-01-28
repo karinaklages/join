@@ -1,133 +1,114 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/standard.css" />
-    <link rel="stylesheet" href="./styles/sidebar.css">
-    <link rel="stylesheet" href="./styles/sidebar_nav_main.css">
-    <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/summary.css">
-    <link rel="stylesheet" href="./styles/board.css">
-    <link rel="stylesheet" href="./styles/task_detail_overlay.css" />
-    <link rel="stylesheet" href="./styles/task_detail_edit_overlay.css" />
-    <link rel="stylesheet" href="./styles/add_task.css" />
-    <link rel="stylesheet" href="./styles/add_task_dropdowns.css" />
-    <link rel="stylesheet" href="./styles/add_task_overlay.css" />
-    <link rel="stylesheet" href="./styles/mobile_footer.css">
-    <link rel="stylesheet" href="./styles/mobile_board.css">
-    <link rel="stylesheet" href="./styles/mobile_add_task_overlay.css">
-    <link rel="stylesheet" href="./styles/mobile_task_detail_overlay.css">
-    <link rel="stylesheet" href="./styles/toastmessage.css">
-    <script src="./script.js" defer></script>
-    <script src="./scripts/variables.js" defer></script>
-    <script src="./templates/board_templates.js" defer></script>
-    <script src="./templates/sidebar_navbar_template.js" defer></script>
-    <script src="./templates/summary_content.js" defer></script>
-    <script src="./templates/task_detail_overlay_template.js" defer></script>
-    <script src="./templates/add_task_overlay_template.js" defer></script>
-    <script src="./scripts/board.js" defer></script>
-    <script src="./scripts/add_task.js" defer></script>
-    <script src="./scripts/add_task_subtasks_assignees.js" defer></script>
-    <script src="./scripts/drag_and_drop.js"></script>
-    <script src="./scripts/task_detail_overlay.js" defer></script>
-    <script src="./scripts/task_detail_edit_overlay.js" defer></script>
-    <script src="./scripts/add_edit_contact_overlay.js" defer></script>
-    <script src="./scripts/get_data.js" defer></script>
-    <script src="./scripts/firebase.js" defer></script>
-    <title>Board</title>
-  </head>
-  <body onload="initBoard()">
-    <div class="order_sidebar_main">
-      <aside class="sidebar desktop" id="id_sidebar">    
-      </aside>
-      <div class = "nav_main_content">
-        <nav class="nav_bar" id="id_navbar">
-        </nav>
-        <main class="margin_left margin_top content_wrapper_sidebar">
-          <section class="order_header_board">
-            <div class="board_mobile_header">
-              <h1>Board</h1>
-              <button class="btn_add_task_board_mobile button" onclick="openAddTaskDialog('todo')"><img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/standard.css">
+  <link rel="stylesheet" href="./styles/sidebar.css">
+  <link rel="stylesheet" href="./styles/sidebar_nav_main.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/summary.css">
+  <link rel="stylesheet" href="./styles/board.css">
+  <link rel="stylesheet" href="./styles/task_detail_overlay.css">
+  <link rel="stylesheet" href="./styles/task_detail_edit_overlay.css">
+  <link rel="stylesheet" href="./styles/add_task.css">
+  <link rel="stylesheet" href="./styles/add_task_dropdowns.css">
+  <link rel="stylesheet" href="./styles/add_task_overlay.css">
+  <link rel="stylesheet" href="./styles/mobile_footer.css">
+  <link rel="stylesheet" href="./styles/mobile_board.css">
+  <link rel="stylesheet" href="./styles/mobile_add_task_overlay.css">
+  <link rel="stylesheet" href="./styles/mobile_task_detail_overlay.css">
+  <link rel="stylesheet" href="./styles/toastmessage.css">
+  <script src="./script.js" defer></script>
+  <script src="./scripts/variables.js" defer></script>
+  <script src="./templates/board_templates.js" defer></script>
+  <script src="./templates/sidebar_navbar_template.js" defer></script>
+  <script src="./templates/summary_content.js" defer></script>
+  <script src="./templates/task_detail_overlay_template.js" defer></script>
+  <script src="./templates/add_task_overlay_template.js" defer></script>
+  <script src="./scripts/board.js" defer></script>
+  <script src="./scripts/add_task.js" defer></script>
+  <script src="./scripts/add_task_subtasks_assignees.js" defer></script>
+  <script src="./scripts/drag_and_drop.js"></script>
+  <script src="./scripts/task_detail_overlay.js" defer></script>
+  <script src="./scripts/task_detail_edit_overlay.js" defer></script>
+  <script src="./scripts/add_edit_contact_overlay.js" defer></script>
+  <script src="./scripts/get_data.js" defer></script>
+  <script src="./scripts/firebase.js" defer></script>
+  <title>Board</title>
+</head>
+<body onload="initBoard()">
+  <div class="order_sidebar_main">
+    <aside class="sidebar desktop" id="id_sidebar"></aside>
+    <div class = "nav_main_content">
+    <nav class="nav_bar" id="id_navbar"></nav>
+    <main class="margin_left margin_top content_wrapper_sidebar">
+      <section class="order_header_board">
+        <div class="board_mobile_header">
+          <h1>Board</h1>
+          <button class="btn_add_task_board_mobile button" onclick="openAddTaskDialog('todo')"><img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
+        </div>
+        <div class="order_header_right_side">
+          <div class="style_searchbar_board">
+            <input class="style_input_searchbar" type="text" placeholder="Find Task" onkeyup="filterTasks()">
+            <div class="border_searchbar"></div>
+            <div class="style_search_icon_box">
+              <img class="style_search_icon" src="./assets/img/search.svg" alt="">
             </div>
-            <div class="order_header_right_side">
-              <div class="style_searchbar_board">
-                <input class="style_input_searchbar" type="text" placeholder="Find Task" onkeyup="filterTasks()">
-                <div class="border_searchbar"></div>
-                <div class="style_search_icon_box">
-                  <img class="style_search_icon" src="./assets/img/search.svg" alt="">
-                </div>
-                <div id="searchMsg" class="search_error_message"></div>
-              </div>
-              <button class="btn_add_task_board button" onclick="openAddTaskDialog('todo')">Add Task<img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
+            <div id="searchMsg" class="search_error_message"></div>
+          </div>
+          <button class="btn_add_task_board button" onclick="openAddTaskDialog('todo')">Add Task<img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
+        </div>
+      </section> 
+      <section class="order_board_sections">
+        <div class="order_elements_in_section">
+          <div class="order_elements_in_section_header">
+            <p class="text_section">To Do</p>
+            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('todo')" role="button" aria-label="Add Task">
+          </div>
+          <div class="width_section" ondrop="drop('todo'); removeHighlight('todo')" ondragover="allowDrop(event); highlight('todo')" ondragleave="removeHighlight('todo')">
+            <div class="no_task_available" id="board_column_todo" data-initialized= "false">
+              <p>No tasks in To Do</p>
             </div>
-          </section> 
-          <section class="order_board_sections">
-            <!-- Board -->
-            <!-- To Do -->
-            <div class="order_elements_in_section">
-              <div class="order_elements_in_section_header">
-                <p class="text_section">To Do</p>
-                <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('todo')" role="button" aria-label="Add Task">
-              </div>
-              <div class="width_section"  
-                  ondrop="drop('todo'); removeHighlight('todo')" 
-                  ondragover="allowDrop(event); highlight('todo')" 
-                  ondragleave="removeHighlight('todo')">
-                <div class="no_task_available" id="board_column_todo" data-initialized= "false">
-                  <p>No tasks in To Do</p>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="order_elements_in_section">
+          <div class="order_elements_in_section_header">
+            <p class="text_section">In Progress</p>
+            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('inProgress')" role="button" aria-label="Add Task">
+          </div>
+          <div class="width_section" ondrop="drop('inProgress'); removeHighlight('inProgress')" ondragover="allowDrop(event); highlight('inProgress')" ondragleave="removeHighlight('inProgress')">
+            <div class="no_task_available" id="board_column_inProgress" data-initialized= "false">
+              <p>No tasks in Progress</p>
             </div>
-            <!-- In Progress-->
-            <div class="order_elements_in_section">
-              <div class="order_elements_in_section_header">
-                <p class="text_section">In Progress</p>
-                <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('inProgress')" role="button" aria-label="Add Task">
-              </div>
-              <div class="width_section" 
-                  ondrop="drop('inProgress'); removeHighlight('inProgress')" 
-                  ondragover="allowDrop(event); highlight('inProgress')" 
-                  ondragleave="removeHighlight('inProgress')">
-                <div class="no_task_available" id="board_column_inProgress" data-initialized= "false">
-                  <p>No tasks in Progress</p>
-                </div>
-              </div>                                   
-            </div> 
-            <!-- Await Feedback -->
-            <div class="order_elements_in_section">
-              <div class="order_elements_in_section_header">
-                <p class="text_section">Await Feedback</p>
-                <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('awaitFeedback')" role="button" aria-label="Add Task">
-              </div>
-              <div class="width_section"  
-                ondrop="drop('awaitFeedback'); removeHighlight('awaitFeedback')" 
-                ondragover="allowDrop(event); highlight('awaitFeedback')" 
-                ondragleave="removeHighlight('awaitFeedback')">
-                <div class="no_task_available" id="board_column_awaitFeedback" data-initialized= "false">
-                  <p>No tasks in Await Feedback</p>
-                </div>
-              </div>
+          </div>                                   
+        </div> 
+        <div class="order_elements_in_section">
+          <div class="order_elements_in_section_header">
+            <p class="text_section">Await Feedback</p>
+            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('awaitFeedback')" role="button" aria-label="Add Task">
+          </div>
+          <div class="width_section" ondrop="drop('awaitFeedback'); removeHighlight('awaitFeedback')" ondragover="allowDrop(event); highlight('awaitFeedback')" ondragleave="removeHighlight('awaitFeedback')">
+            <div class="no_task_available" id="board_column_awaitFeedback" data-initialized= "false">
+              <p>No tasks in Await Feedback</p>
             </div>
-            <!-- Done -->
-            <div class="order_elements_in_section">
-              <p class="text_section">Done</p>
-              <div class="width_section" 
-                  ondrop="drop('done'); removeHighlight('done')" 
-                  ondragover="allowDrop(event); highlight('done')" 
-                  ondragleave="removeHighlight('done')">
-                <div class="no_task_available" id="board_column_done" data-initialized= "false">
-                  <p>No tasks in Done</p>
-                </div>  
-              </div>                           
-            </div>
-          </section>
-        </main>
-        <footer id="mobile_footer"></footer>
-        <!-- Add Task Dialog -->
+          </div>
+        </div>
+        <div class="order_elements_in_section">
+          <p class="text_section">Done</p>
+          <div class="width_section" ondrop="drop('done'); removeHighlight('done')" ondragover="allowDrop(event); highlight('done')" ondragleave="removeHighlight('done')">
+            <div class="no_task_available" id="board_column_done" data-initialized= "false">
+              <p>No tasks in Done</p>
+            </div>  
+          </div>                           
+        </div>
+      </section>
+    </main>
+    <footer id="mobile_footer"></footer>
+
         <dialog class="dialog_add_task_container overlay_switch" id="addTaskDialog">
           <main class="dialog_layout">
             <form class="add_task_overlay_wrapper content_wrapper dialog_form" id="addTaskForm" novalidate>
@@ -223,12 +204,10 @@
             </form>
           </main>
         </dialog>
-        <!-- Task Detail Dialog -->
-        <dialog class="dialog_task_detail_container" id="taskDetailDialog"></dialog>
-        <!-- Task Detail Edit Dialog -->
-        <dialog class="dialog_task_detail_edit_container" id="taskDetailEditDialog"></dialog>
-      </div>
+      <dialog class="dialog_task_detail_container" id="taskDetailDialog"></dialog>
+      <dialog class="dialog_task_detail_edit_container" id="taskDetailEditDialog"></dialog>
     </div>
-    <div id="msgBox" class="toast_message toast_message_board" ><p>Task added to board</p> <img src="./assets/img/board_icon.svg" alt="a board icon"></div>
-  </body>
+  </div>
+  <div id="msgBox" class="toast_message toast_message_board"><p>Task added to board</p><img src="./assets/img/board_icon.svg" alt=""></div>
+</body>
 </html>

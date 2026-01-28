@@ -1,6 +1,6 @@
 function sidebarLoginTemplate() {
   return `
-        <a class="sidebar_logo_link" href="index.html"><img class="logo_invert" src="./assets/img/logo_version2.svg" alt="Join Logo"></a>
+        <a class="sidebar_logo_link" href="index.html"><img class="logo_invert" src="./assets/img/logo_version_2.svg" alt="Join Logo"></a>
         <div class="order_selection_privacy_legal_sidebar">
             <div class="sidebar_selection">
                 <a class="order_icon_selection link_active" href="./summary.html">
@@ -32,7 +32,7 @@ function sidebarLoginTemplate() {
 
 function sidebarLogOffTemplate() {
   return `
-        <a  class="sidebar_logo_link" href="index.html"><img class="logo_invert" src="./assets/img/logo_version2.svg" alt="Join Logo"></a>
+        <a  class="sidebar_logo_link" href="index.html"><img class="logo_invert" src="./assets/img/logo_version_2.svg" alt="Join Logo"></a>
         <div class="order_selection_privacy_legal_sidebar">
             <a class="style_login_icon_text" href="./index.html">
                 <img src="./assets/img/log_in.svg" alt="Login">
@@ -57,8 +57,8 @@ function navbarTemplate(userInitials) {
                 <div class="user_circle" onclick="toggleMenu()">${userInitials}</div>
             </div>
             <div id="menu_navbar" class="menu_navbar d_none content_wrapper">
-                <a href="./legal_notice.html">Legal Notice</a>
                 <a href="./privacy_policy.html">Privacy Policy</a>
+                <a href="./legal_notice.html">Legal Notice</a>
                 <a href="./index.html" onclick="localStorage.removeItem('activeUser')">Log out</a>
             </div>
         </div>

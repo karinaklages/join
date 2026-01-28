@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/sidebar_nav_main.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/summary.css">
+    <link rel="stylesheet" href="./styles/mobile_footer.css">
+    <link rel="stylesheet" href="./styles/mobile_summary.css">
+    <link rel="stylesheet" href="./styles/mobile_standard.css">
+    <script src="./script.js" defer></script>
+    <script src="./templates/sidebar_navbar_template.js" defer></script>
+    <script src="./templates/summary_content.js" defer></script>
+    <script src="./scripts/variables.js" defer></script>
+    <script src="./scripts/summary.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/greeting_animation.js"></script>
+    <title>Summary</title>
+</head>
+<body onload="initSummary()">
+    <div class="order_sidebar_main">
+        <aside class="sidebar desktop" id="id_sidebar">
+        </aside>
+        <div class="nav_main_content">
+            <nav class="nav_bar" id="id_navbar">
+            </nav>
+            <main class="content_wrapper">
+                <section class="margin_top margin_left summary_header">
+                    <h1>Join 360</h1>
+                    <div class="divider_header"></div>
+                    <p class="text_header">Key Metrics at a Glance</p>
+                </section>
+                <div class="order_summary_information" id="id_content_summary">
+                </div>
+            </main>
+            <footer id="mobile_footer"></footer>
+        </div>
+    </div>
+</body>
+</html>

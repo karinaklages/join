@@ -1,0 +1,42 @@
+.order_sidebar_main {
+  display: flex;
+  width: 100%;
+}
+
+.nav_main_content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 300px);
+  overflow: visible;
+}
+
+/* MOBILE */
+
+@media(max-width: 1350px){
+  .sidebar{
+    max-width: 200px;
+  } 
+
+  .order_icon_selection{
+    padding-left: 40px;
+  }
+
+  .design_privacy_legal{
+    padding-left: 40px;
+  }
+
+  .nav_main_content{
+      width: calc(100% - 200px);
+  }
+}
+
+@media (max-width:700px) {
+  .nav_main_content{
+    width: 100%;
+  }
+
+  .desktop {
+    display: none;
+  }
+}

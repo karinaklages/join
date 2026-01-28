@@ -1,0 +1,58 @@
+@media (max-width: 1350px) {
+  .add_task_main_content {
+    padding-left: 50px;
+  }
+
+  .urgent_btn_default,
+  .medium_btn_default,
+  .low_btn_default {
+    font-size: 16px;
+  }
+
+  .urgent_btn_filled,
+  .medium_btn_filled,
+  .low_btn_filled {
+    font-size: 16px;
+  }
+
+  .add_task_form_container {
+    gap: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .add_task_form_container {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .formfield_left,
+  .formfield_right {
+    width: 100%;
+    max-width: 840px;
+  }
+
+  .vertical_line {
+    display: none;
+  }
+
+  .add_task_main_content {
+    padding-left: 30px;
+    padding-right: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .required_mobile {
+    display: block;
+  }
+
+  .required_desktop {
+    display: none;
+  }
+
+  .add_task_bottom_area {
+    gap: 15px;
+    justify-content: flex-end;
+  }
+}

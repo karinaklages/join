@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+    <link rel="stylesheet" href="./styles/animation.css" />
+    <title>Join</title>
+    <script src="./scripts/variables.js" defer></script>
+  </head>
+  <body class="auth_body">
+    <script>
+        if (sessionStorage.getItem("introAnimationPlayed")) {
+            document.body.classList.add("no-animation");
+        } else {
+            sessionStorage.setItem("introAnimationPlayed", "true");
+        }
+    </script>
+    <!-- Splash logo -->
+    <div id="splash">
+      <img id="splash_logo" src="./assets/img/logo_version_1.svg" alt="logo" />
+    </div>
+    <!--Header  -->
+      <header id="auth_header">
+        <a href="index.html"> <img
+          id="header_logo"
+          src="./assets/img/logo_version_1.svg"
+          alt="logo image"
+        /></a>
+        <div class="sign_up auth_desktop">
+          <span class="auth_span">Not a Join user?</span>
+          <button class="signup_btn" onclick="goToSignup()">Sign up</button>
+        </div>
+      </header>
+      <!-- Main content -->
+      <main class="auth_main">
+        <div class="auth_main_content">
+          <div class="auth_title">
+            <h1>Log in</h1>
+            <div class="underline"></div>
+          </div>
+          <form class="auth_form">
+            <!-- Email input wrapper -->
+            <div class="input_wrapper">
+              <input
+                id="auth_input_mail"
+                class="icon_input"
+                type="email"
+                placeholder="Email"
+                required
+                oninput="resetLoginError()"
+              />
+              <img
+                class="input_icon"
+                src="./assets/img/mail_icon.svg"
+                alt="Email Icon"
+              />
+            </div>
+            <!-- Password input wrapper -->
+            <div class="input_wrapper">
+              <input
+                id="auth_password_input"
+                class="icon_input"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <img
+                id="toggle_password_icon"
+                class="input_icon toggle-password"
+                src="./assets/img/lock_icon.svg"
+                alt="Toggle Password Visibility"
+              />
+              <div id="login_error_message">Check your email and password</div>
+            </div>
+            <div class="auth_btns">
+              <button class="auth_btn" type="button" onclick="login()">
+                Log in
+              </button>
+              <button
+                class="guest_log_in_btn"
+                type="button"
+                onclick="guestLogin()">
+                Guest Log in
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="sign_up auth_mobile">
+          <span class="auth_span">Not a Join user?</span>
+          <button class="signup_btn" onclick="goToSignup()">Sign up</button>
+        </div>
+      </main>
+      <!-- Footer -->
+        <footer class="auth_footer login_footer">
+          <a class="auth_link" href="privacy_policy.html">Privacy Policy</a>
+          <a class="auth_link" href="legal_notice.html">Legal Notice</a>
+        </footer>
+    </div>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/firebase.js"></script>
+  </body>
+</html>

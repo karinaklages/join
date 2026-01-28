@@ -1,0 +1,122 @@
+/* TEXT & TYPOGRAPHY */
+
+.legal_privacy_p {
+  margin-bottom: 24px;
+  color: #2a3647;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.legal_notice_span {
+  color: #29abe2;
+}
+
+.legal_privacy_h2 {
+  margin: 0 0 24px 0;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.legal_privacy_h3 {
+  font-family: 'latin_700';
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.pp_h4 {
+  font-family: 'latin_700';
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.bold_list_elements {
+  font-family: 'latin_700';
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* LISTS */
+
+.pp_ul {
+  padding-left: 20px;
+}
+
+.legal_notice_ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.list_items {
+  color: #2a3647;
+}
+
+/* HEADERS */
+
+.legal_privacy_title {
+  padding-bottom: 30px;
+}
+
+.legal_privacy_main {
+  margin: 100px 40px 10px 100px;
+}
+
+.ln_pp_hp_section {
+  padding-bottom: 10px;
+  background-color: #f6f7f8;
+}
+
+.ln_pp_hp_content {
+  padding: 206px 97px 0 328px;
+  cursor: default;
+}
+
+.ln_pp_hp_headline {
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+
+.link_active.active {
+  width: 300px;
+}
+
+/* PAIGE LAYOUT */
+
+.pp_content {
+  padding-bottom: 50px;
+}
+
+/* MOBILE */
+
+@media (max-width: 1350px) {
+  .design_privacy_legal {
+    width: 200px;
+  }
+
+  .legal_privacy_main {
+    margin-left: 50px;
+  }
+
+  .link_active.active {
+    width: 200px;
+  }
+}
+
+@media (max-width:1000px) {
+  .legal_privacy_main {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width:700px) {
+  .legal_privacy_main {
+    margin: 50px 16px 10px 16px;
+  }
+}

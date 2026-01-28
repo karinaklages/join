@@ -1,0 +1,174 @@
+/* TASK DETAIL OVERLAY */
+
+@media (max-width: 500px) {
+    .dialog_task_detail_container {
+        width: 90%;
+        max-width: 100%;
+        overflow-x: hidden;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #taskDetailDialog {
+        transform: translateX(-50%);
+    }
+
+    .task_detail_wrapper {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 420px) {
+    .dialog_task_detail_container {
+        padding: 16px;
+        overflow-y: hidden;
+    }
+
+    .task_detail_wrapper {
+        padding-top: 70px;
+        width: 98%;
+    }
+
+    .task_detail_title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        width: 98%;
+    }
+
+    .close_btn_container_task_detail {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .recommender_table th {
+        width: 100px;
+        white-space: nowrap;
+    }
+
+    .delete_edit_btn {
+        padding: 0;
+    }
+}
+
+/* TASK DETAIL EDIT OVERLAY */
+
+@media (max-width: 1000px) {
+    .list_icon_element {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 540px) {
+    .assigned_contacts_row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .dialog_task_detail_edit_container {
+        padding: 20px;
+    }
+
+    .close_btn_container_task_detail_edit {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .urgent_btn_default,
+    .medium_btn_default,
+    .low_btn_default {
+        font-size: 14px;
+    }
+
+    .urgent_btn_filled,
+    .medium_btn_filled,
+    .low_btn_filled {
+        font-size: 14px;
+    }
+
+    #task_detail_icon_medium_task,
+    #task_detail_icon_low_task,
+    #task_detail_icon_urgent_task {
+        width: 16px;
+    }
+
+    .styled_input_edit {
+        font-size: 16px;
+    }
+
+    .styled_input_edit::placeholder {
+        font-size: 16px;
+        padding-left: 4px;
+    }
+
+    .styled_input_edit_description {
+        font-size: 16px;
+    }
+
+    .styled_input_edit_description::placeholder {
+        font-size: 16px;
+        padding-left: 4px;
+    }
+
+    .subtask_text,
+    .list_row,
+    .list_element {
+        font-size: 16px;
+    }
+
+    .add_task_input_edit::placeholder {
+        padding-left: 12px;
+    }
+
+    .edit_container input.subtask_edit_input {
+        font-size: 16px;
+    }
+
+    .user_info_taks_detail_edit {
+        gap: 10px;
+    }
+
+    .user_name_assignee_circle_taks_detail_edit {
+        font-size: 16px;
+    }
+
+    .dropdown_list_contacts_task_detail_edit {
+        border: 1px solid #ccc !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .checkbox_icon_taks_detail_edit {
+        padding-right: 14px;
+    }
+}
+
+@media (max-width: 340px) {
+    .mobile_editing {
+        font-size: 14px;
+    }
+
+    .user_name_assignee_circle_taks_detail_edit {
+        font-size: 14px;
+    }
+
+    .dialog_task_detail_container {
+        max-height: 85vh; 
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .scroll_container {
+        flex: 1;            
+        overflow-y: auto;  
+        max-height: unset;  
+        min-height: 0;      
+        padding-right: 5px; 
+    }
+
+}

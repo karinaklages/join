@@ -1,0 +1,181 @@
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .order_board_sections {
+    gap: 10px;
+  }
+
+  .width_section {
+    width: 95%;
+  }
+  
+  .order_elements_in_section_header {
+    width: 95%;
+  }
+
+  .text_section {
+    font-size: 16px;
+  }
+
+  .label_task_card {
+    font-size: 16px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+
+  .text_label_task_card {
+    padding: 2px;
+  }
+
+  .order_elements_in_section {
+    width: 24%;
+  }
+}
+
+@media (max-width: 1490px) {
+  .style_progress_bar {
+    width: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .style_progress_bar {
+    width: 48px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .style_progress_bar{
+    width: 32px;
+  }
+}
+
+@media (max-width: 1199px) {
+ .style_progress_bar{
+    width: 100px;
+  }
+
+  [id^="board_column_"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  [id^="board_column_"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  .style_task_card {
+    min-width: 250px;
+    max-width: 250px;
+    flex-shrink: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .btn_add_task_board_mobile {
+    display: flex;
+  }
+
+  .btn_add_task_board {
+    display: none;
+  }
+
+  main.margin_left {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+
+  .order_header_board {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .order_header_right_side {
+    width: 100%;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .style_searchbar_board {
+    width: 100%;
+  }
+
+  .order_board_sections {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .order_elements_in_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .no_task_available {
+    width: 100%;
+  }
+
+  .no_task_available {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .style_task_card {
+    min-width: 250px;
+    max-width: 250px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .width_section {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  main.margin_left {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+  }
+
+  .nav_main_content {
+    width: 100%;
+  }
+
+  .margin_top {
+    margin-top: 40px;
+  }
+
+  .order_header_board h1 {
+    margin-top: 10px;
+  }
+
+  .btn_add_task_board_mobile {
+    width: 35px;
+    height: 35px;
+  }
+
+  .board_mobile_header {
+    width: 98%;
+  }
+
+  .order_elements_in_section {
+    width: 98%;
+  }
+}

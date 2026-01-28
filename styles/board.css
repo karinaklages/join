@@ -1,0 +1,348 @@
+.order_header_board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order_header_right_side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.style_searchbar_board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding-left: 8px;
+}
+
+.style_search_icon_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.style_input_searchbar {
+  border: none;
+  outline: none;
+  height: 38px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 82%;
+  font-family: "latin_400";
+  font-size: 20px;
+}
+
+.style_input_searchbar::placeholder {
+  color: #d1d1d1;
+}
+
+.style_search_icon {
+  height: 32px;
+  background-color: white;
+  margin: auto;
+}
+
+.border_searchbar {
+  border: 0.5px solid rgb(240, 238, 238);
+  height: 32px;
+}
+
+.btn_add_task_board {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 45px;
+  background-color: #2a3647;
+  color: white;
+  font-family: "latin_600";
+  font-size: 21px;
+  width: 165px;
+  padding-left: 20px;
+}
+
+.img_add_btn:hover {
+  cursor: pointer;
+  content: url("../assets/img/add_square_blue.svg");
+}
+
+.order_board_sections {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  gap: 30px;
+  margin-top: 50px;
+  height: auto;
+  min-height: calc(100vh - 200px);
+}
+
+.order_elements_in_section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order_elements_in_section {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  height: auto;
+}
+
+.text_section {
+  font-family: "latin_700";
+  font-weight: 700;
+  font-size: 20px;
+  color: #2a3647;
+}
+
+.width_section {
+  width: 100%;
+  margin-top: 20px;
+  flex: 1;
+  min-height: 100px;
+  transition: all 100ms ease-in-out;
+  border: 1.5px solid transparent;
+}
+
+.no_task_available {
+  background-color: #ececec;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #acacac;
+  border: 1.5px dashed #acacac;
+  font-family: "latin_400";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.style_task_card {
+  background-color: white;
+  height: fit-content;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.label_task_card {
+  background-color: #00ff62;
+  height: auto;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1px 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: "latin_400";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.text_label_task_card {
+  color: white;
+  padding: 5px;
+}
+
+.style_text_titel_card {
+  font-weight: bold;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "latin_700";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.style_text_description_card {
+  color: #acacac;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "latin_400";
+  font-weight: 400;
+  font-size: 16px;
+  overflow-wrap: break-word; 
+  word-wrap: break-word;     
+  word-break: break-word;    
+  hyphens: auto;             
+}
+
+.order_progressbar_counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.style_progress_bar {
+  width: 100px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 2px solid #29abe2;
+  display: flex;
+}
+
+.progressbar_filled {
+  background-color: #29abe2;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.order_counter_progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_circle_task_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-family: "latin_400";
+  margin-left: -7px;
+  border: 1.5px solid white;
+  color: white;
+  font-size: 12px;
+}
+
+.order_elements_user_icon_priolable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.order_user_icons_task_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_add_task_board_mobile {
+  display: none;
+  background-color: #2a3647;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.board_mobile_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.style_input_searchbar:focus,
+.style_input_searchbar:active,
+.style_input_searchbar:focus-visible {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.style_searchbar_board:focus-within {
+  border: 2px solid #29abe2 !important;
+}
+
+.style_searchbar_board {
+  position: relative;
+}
+
+.search_error_message {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  color: #ff3d00;
+  font-size: 12pt;
+  pointer-events: none;
+}
+
+.drag_area_highlight {
+  border: 2px dashed #a8a8a8;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.drag_area_highlight {
+  border: 1.5px dashed #acacac;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+.dragged_task_visual {
+  transform: rotate(4deg) scale(0.95);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+  opacity: 0.8;
+  cursor: grabbing;
+  z-index: 1000;
+  margin: 5px;
+}
+
+.mobile_drag_clone {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: rotate(3deg) scale(1.05);
+  transition: none;
+}
+
+.mobile_drag_active_original {
+  opacity: 0.4;
+  background-color: #f0f0f0;
+}
+
+.style_task_card {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  bottom: 200%;
+  background-color: #29abe2;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+}

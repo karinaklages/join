@@ -1,0 +1,290 @@
+/* DROPDOWN INPUTS */
+
+.dropdown {
+    width: 100%;
+}
+
+.dropdown_input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 12px;
+}
+
+.dropdown_icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/img/drop_down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #29abe2;
+}
+
+.dropdown_input:hover .dropdown_icon {
+    background-image: url("../assets/img/drop_down_hover.svg");
+}
+
+.dropdown_list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown_list_contacts {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-height: 185px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown_item {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.dropdown_item:hover {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+.dropdown_item_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown_circle_initals {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.assigned_contacts_row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.input_spacer {
+    height: 24px;
+    width: 100%;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkbox_icon {
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.checkbox_icon[data-checked="false"] {
+    content: url("../assets/img/checkbox_unchecked_contact_form.svg");
+}
+
+.checkbox_icon[data-checked="true"] {
+    content: url("../assets/img/checkbox_checked_contact_form.svg");
+}
+
+/* ASSIGNED TO DROPDOWN */
+
+.contact_initial_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.2s ease;
+    font-size: 15px;
+}
+
+.user_name_assignee_circle {
+    font-size: 20px;
+}
+
+/* SUBTASK AREA AND BUTTON */
+
+.subtask_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input_container {
+    position: relative;
+}
+
+.add_task_input {
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
+.subtask_actions {
+    position: absolute;
+    top: 35%;
+    right: 16px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.subtask_actions button {
+    background-color: none;
+}
+
+.subtask_divider {
+    border-right: 1.5px solid #d1d1d1;
+    height: 27px;
+    position: absolute;
+    top: 46%;
+    right: 29px;
+    transform: translateY(-50%);
+}
+
+.add_task_input:focus+.subtask_actions {
+    opacity: 1;
+}
+
+.subtask_btn {
+    background-color: transparent !important;
+    height: 35px;
+}
+
+.cancel_subtask:hover {
+    content: url("../assets/img/close_hover.svg") !important;
+}
+
+.submit_subtask:hover {
+    content: url("../assets/img/check_hover.svg");
+}
+
+.new_subtask {
+    color: #2a3647;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#subtaskList {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    max-height: 70px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: mandatory;
+}
+
+.edit_subtask:hover {
+    content: url("../assets/img/edit_hover.svg");
+}
+
+.delete_subtask:hover {
+    content: url("../assets/img/delete_hover.svg");
+}
+
+.list_element {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_icon_element {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-right: 12px;
+
+}
+
+.edit_container {
+    position: relative;
+}
+
+.subtask_edit_btn {
+    background-color: transparent !important;
+    height: 35px;
+    cursor: pointer;
+}
+
+.cancel_subtask_edit:hover {
+    content: url("../assets/img/delete_hover.svg") !important;
+}
+
+.subtask_edit_hr {
+    position: relative;
+    top: -2px;
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #29abe2;
+}
+
+.edit_input {
+    flex: 1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.subtask_edit_input {
+    width: 100%;
+    height: 36px;
+    padding-right: 80px;
+    border: none;
+    margin-top: 8px;
+}
+
+.subtask_edit_area {
+    position: absolute;
+    right: 16px;
+    top: 58%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.subtask_edit_btn {
+    background: transparent;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}

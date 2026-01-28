@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/sidebar_nav_main.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/contact_mobile.css">
+    <link rel="stylesheet" href="./styles/add_task.css" />
+    <link rel="stylesheet" href="./styles/add_task_dropdowns.css" />
+    <link rel="stylesheet" href="./styles/add_edit_contact_overlay.css" />
+    <link rel="stylesheet" href="./styles/mobile_add_edit_contact_overlay.css">
+    <link rel="stylesheet" href="./styles/mobile_footer.css">
+    <link rel="stylesheet" href="./styles/toastmessage.css">
+    <link rel="stylesheet" href="./styles/mobile_add_edit_contact_overlay.css">
+    <script src="./scripts/variables.js" defer></script>
+    <script src="./scripts/firebase.js" defer></script>
+    <script src="./scripts/get_data.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./templates/sidebar_navbar_template.js" defer></script>
+    <script src="./templates/add_edit_contact_overlay_template.js" defer></script>
+    <script src="./templates/summary_content.js" defer></script>
+    <script src="./templates/contact_content.js" defer></script>
+    <script src="./scripts/add_edit_contact_overlay.js" defer></script>
+    <script src="./scripts/contacts.js" defer></script>
+    <title>Contacts</title>
+</head>
+
+<body onload="initContacts()">
+    <div class="order_sidebar_main">
+        <aside class="sidebar desktop" id="id_sidebar">
+        </aside>
+        <div class="nav_main_content">
+            <nav class="nav_bar" id="id_navbar">
+            </nav>
+            <main class="contact_page">
+                <div class="contact_list_container" id="contact_list_container">
+                    <div class="button_container">
+                        <button class="contact_btn" id="addNewContactBtn" onclick="openAddContactDialog()">
+                            <span>Add new Contact</span>
+                            <img src="./assets/img/person_add_white.svg" alt="add Person" />
+                        </button>
+                    </div>
+                    <ul id="contact_list" class="contact_list">
+                    </ul>
+                </div>
+                <div class="contact_info" id="contact_info">
+                    <div class="contact_headline">
+                        <h3>Contacts</h3>
+                        <div class="headline_seperator"></div>
+                        <span>Better with a team</span>
+                    </div>
+                </div>
+            </main>
+            <footer id="mobile_footer"></footer>
+            <dialog class="dialog_contact_container" id="addContactDialog"></dialog>
+            <dialog class="dialog_contact_container" id="editContactDialog"></dialog>
+        </div>
+    </div>
+    <div id="msgBox" class="toast_message">Contact successfully created</div>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+@media (max-width: 1220px) {
+  .order_summary_information {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order_greeting_username {
+    margin-left: 50px;
+  }
+
+  .summary_header {
+    flex-wrap: wrap;
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .summary_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  .summary_header h1 {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .text_header {
+    order: 2;
+  }
+
+  .divider_header {
+    order: 3;
+    border-right: none;
+    height: 0;
+    margin: 0;
+    border-bottom: 3px solid #29abe2;
+    width: 90px;
+  }
+
+  .divider_prio_box {
+    margin: 10px;
+  }
+
+  .deadline_information {
+    text-align: center;
+    width: auto;
+  }
+
+  .counter_prio_tickets {
+    gap: 8px;
+    width: 150px;
+    margin-left: 8px;
+  }
+
+  .order_ticket_box_below {
+    gap: 24px;
+  }
+
+  .order_greeting_username {
+    margin-left: 30px;
+  }
+
+  .style_todo_done_box {
+    max-width: 215px;
+  }
+
+  .box_prio_tickets {
+    max-width: 450px;
+  }
+
+  .boxes_last_row {
+    max-width: 135px;
+  }
+}
+
+@media (max-width: 700px) {
+  main.content_wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav_main_content {
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    display: block;
+  }
+
+  main {
+    height: auto !important;
+    min-height: calc(100vh - 80px);
+    padding-bottom: 120px !important;
+  }
+
+  .summary_header {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .style_greeting_text {
+    font-size: 36px;
+  }
+
+  .style_username {
+    font-size: 48px;
+  }
+
+  .text_header {
+    font-size: 20px;
+  }
+
+  .order_greeting_username {
+    margin-left: 50px;
+  }
+
+  .order_summary_information {
+    width: 100%;
+    height: auto !important;
+    overflow: visible;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .order_todo_done_box,
+  .order_ticket_box_below {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .style_todo_done_box,
+  .boxes_last_row,
+  .box_prio_tickets {
+    width: 100% !important;
+    max-width: unset !important;
+    height: 110px;
+    margin-left: 0;
+
+    flex: 1;
+  }
+
+  .box_prio_tickets {
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+
+  .boxes_last_row {
+    height: 116px;
+  }
+
+  .divider_prio_box {
+    height: 50px;
+    align-self: center;
+  }
+
+  .summary_number {
+    font-size: 47px;
+  }
+
+  .style_text {
+    font-size: 16px;
+  }
+
+  .img_summary_edit_check_icon,
+  .board_priority_btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .margin_left {
+    margin-left: 0 !important;
+  }
+
+  .style_prio_area {
+    white-space: nowrap;
+  }
+
+  .box_prio_tickets {
+    gap: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .summary_number {
+    font-size: 36px !important;
+  }
+
+  .style_text,
+  .style_prio_area,
+  .date_of_deadline {
+    font-size: 16px !important;
+  }
+
+  .img_summary_edit_check_icon,
+  .board_priority_btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .style_todo_done_box {
+    max-width: 140px;
+  }
+
+  .box_prio_tickets {
+    max-width: 300px;
+  }
+
+  .boxes_last_row {
+    max-width: 85px;
+  }
+
+  .margin_left {
+    margin-left: 0 !important;
+  }
+
+  main.content_wrapper {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 334px) {
+  .box_prio_tickets {
+    padding: 0;
+  }
+
+  .counter_prio_tickets {
+    width: 110px;
+    margin-left: 0;
+  }
+
+  .divider_prio_box {
+    margin: 2px;
+  }
+}

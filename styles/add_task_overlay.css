@@ -1,0 +1,88 @@
+/* FORM AREA */
+
+.dialog_add_task_container {
+    width: 1200px;
+    height: 850px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 25px; 
+    padding: 50px;      
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    overflow-y: auto;
+}
+
+.add_task_overlay_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#addTaskDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(calc(100vw + 50%), -50%);  
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border: none;
+}
+
+#addTaskDialog[open] {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.close_btn_container {
+    position: absolute;
+    top: 6px;
+    right: 0px;
+}
+
+.close_btn {
+    cursor: pointer;
+}
+
+.close_btn:hover {
+    content: url("../assets/img/x_hover.svg");
+}
+
+/* SCROLL BAR BIG */
+
+.add_task_form_container_scroll::-webkit-scrollbar {
+    width: 8px;
+    background: transparent; 
+}
+
+.add_task_form_container_scroll::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 6px;
+}
+
+.add_task_form_container_scroll::-webkit-scrollbar-thumb:hover {
+    background: #c8c8c8;
+}
+
+.no_scroll {
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.dialog_layout,
+.dialog_form {
+    max-height: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add_task_form_container_scroll {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.dropdown_list {
+    max-height: 250px;
+    overflow-y: auto;
+}

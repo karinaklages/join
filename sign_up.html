@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <link rel="stylesheet" href="./styles/toastmessage.css" />
+    <script src="./scripts/firebase.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./scripts/get_data.js" defer></script>
+    <script src="./scripts/variables.js" defer></script>
+    <title>Sign Up</title>
+  </head>
+  <body onload="initSignupForm()" class="auth_body">
+    <header id="auth_header">
+      <a href="index.html"><img
+        id="header_logo"
+        src="./assets/img/logo_version_1.svg"
+        alt="logo image"
+      /></a>
+    </header>
+    <main class="auth_main sign_up_main">
+      <div class="signup_main_content">
+        <div class="auth_title">
+          <div class="signup_header">
+            <a href="index.html"
+              ><img
+                class="arrow_icon"
+                src="./assets/img/arrow-left-line.svg"
+                alt="arrow left icon"
+            /></a>
+            <h1>Sign up</h1>
+          </div>
+          <div class="underline"></div>
+        </div>
+        <form class="signup_in_form" onsubmit="signup(event)">
+          <div class="input_wrapper">
+            <input
+              id="auth_input_name"
+              class="icon_input"
+              type="text"
+              placeholder="Name"
+              required
+            />
+            <img
+              class="input_icon"
+              src="./assets/img/person.svg"
+              alt="Email Icon"
+            />
+          </div>
+          <div class="input_wrapper">
+            <input
+              id="auth_input_mail"
+              class="icon_input"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <img
+              class="input_icon"
+              src="./assets/img/mail_icon.svg"
+              alt="Email Icon"
+            />
+            <div id="email_error" class="error_message" style="display: none;">Please check your Email</div>
+          </div>
+          <!-- Password input wrapper -->
+          <div class="input_wrapper">
+            <input
+              id="auth_password_input"
+              class="icon_input"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <img
+              id="toggle_password_icon"
+              class="input_icon toggle-password"
+              src="./assets/img/lock_icon.svg"
+              alt="Toggle Password Visibility"
+            />
+          </div>
+          <!-- Password input wrapper -->
+          <div class="input_wrapper">
+            <input
+              id="auth_confirm_password_input"
+              class="icon_input"
+              type="password"
+              placeholder=" Confirm Password"
+              required
+            />
+            <img
+              id="toggle_confirm_password_icon"
+              class="input_icon toggle-password"
+              src="./assets/img/lock_icon.svg"
+              alt="Toggle Password Visibility"
+            />
+            <div id="confirm_password_error" class="error_message"></div>
+          </div>
+          <label class="checkbox_row">
+            <input type="checkbox" />
+            <span class="checkbox_text"
+              >I accept the
+              <a class="checkbox_link" href="privacy_policy.html"
+                >Privacy Policy</a
+              ></span
+            >
+          </label>
+          <div class="auth_btns">
+            <button id="signup_btn" class="auth_btn" type="submit" disabled>
+              Sign up
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="auth_footer signup_footer">
+      <a class="auth_link" href="privacy_policy.html">Privacy Policy</a>
+      <a class="auth_link" href="legal_notice.html">Legal Notice</a>
+    </footer>
+    <!-- Toastmessage -->
+    <div id="msgBox" class="toast_message">You signed up successfully</div>
+     <script src="./scripts/login.js"></script>
+    <script src="./scripts/signup.js" defer></script>
+  </body>
+</html>

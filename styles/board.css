@@ -293,7 +293,7 @@
 }
 
 .dragged_task_visual {
-  transform: rotate(4deg) scale(0.95);
+  transform: rotate(1.5deg) scale(0.95);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.1s ease-in-out;
   opacity: 0.8;
@@ -308,7 +308,7 @@
   pointer-events: none;
   opacity: 0.9;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transform: rotate(3deg) scale(1.05);
+  transform: rotate(0deg) scale(1.05);
   transition: none;
 }
 

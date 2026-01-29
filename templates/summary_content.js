@@ -28,7 +28,7 @@ function summaryContentTemplate(userName, greeting) {
                 <div class="divider_prio_box"></div>
                 <div class="deadline_information">
                     <p id="id_summary_dueDate" class="date_of_deadline"></p>
-                    <p class="style_prio_area">Upcoming Deadline</p>
+                    <p class="style_prio_area"><span class="break">Upcoming</span> Deadline</p>
                 </div>
             </section>
             <section class="order_ticket_box_below margin_left">

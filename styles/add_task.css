@@ -39,7 +39,7 @@
 }
 
 sup {
-    color: #FF3D00;
+    color: #f175fa;
 }
 
 .hidden_sup {
@@ -51,11 +51,11 @@ sup {
 }
 
 .validate_required.error {
-    border: 2px solid #FF3D00 !important;
+    border: 2px solid #f175fa !important;
 }
 
 .validate_required.error:focus {
-    border: 2px solid #FF3D00 !important;
+    border: 2px solid #f175fa !important;
 }
 
 .required_message {
@@ -63,7 +63,7 @@ sup {
     left: 0;
     bottom: 18px;
     display: none;
-    color: #FF3D00;
+    color: #f175fa;
     font-size: 12pt;
 }
 
@@ -241,7 +241,7 @@ input[type="date"]:-ms-input-placeholder {
 
 .urgent_btn_filled {
     flex: 1;
-    background-color: #FF3D00;
+    background-color: #f175fa;
     color: white;
     border: none;
     border-radius: 8px;
@@ -254,7 +254,7 @@ input[type="date"]:-ms-input-placeholder {
 
 .medium_btn_filled {
     flex: 1;
-    background-color: #FFA800;
+    background-color: #b279f5;
     color: white;
     border: none;
     border-radius: 8px;
@@ -267,7 +267,7 @@ input[type="date"]:-ms-input-placeholder {
 
 .low_btn_filled {
     flex: 1;
-    background-color: #7Ae229;
+    background-color: #1fd7c1;
     color: white;
     border: none;
     border-radius: 8px;

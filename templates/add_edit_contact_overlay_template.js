@@ -19,9 +19,9 @@ function addContactTemplate() {
                         <div>
                             <div class="input_fields_container">
                                 <input type="text" id="id_contact_name" class="contact_input styled_input" placeholder="Name" required oninput="limitInputLength(this, 20)"><br>
-                                <span class="error_text" id="error_name">Name must be at least 2 characters</span>
+                                <span class="error_text" id="error_name">This field is required</span>
                                 <input type="email" id="id_contact_email" class="contact_input styled_input" placeholder="Email" required oninput="limitInputLength(this, 20)"><br>
-                                <span class="error_text" id="error_email">Not a valid E-Mail</span>
+                                <span class="error_text" id="error_email">Not a valid email</span>
                                 <input type="tel" id="id_contact_phone" class="contact_input styled_input" placeholder="Phone" required oninput="limitInputLength(this, 17)"><br>
                                 <span class="error_text" id="error_phone">Not a valid phone number</span>
                             </div>
@@ -61,9 +61,9 @@ function editContactTemplate(c) {
                         <div>
                             <div class="input_fields_container">
                                 <input type="text" id="input-name" class="user_input styled_input" placeholder="Name" value="${c.name}" required oninput="limitInputLength(this, 20)"><br>
-                                <span class="error_text" id="error_name">Name must be at least 2 characters</span>
+                                <span class="error_text" id="error_name">This field is required</span>
                                 <input type="email" id="input-email" class="user_input styled_input" placeholder="Email" value="${c.eMail}" required oninput="limitInputLength(this, 20)"><br>
-                                <span class="error_text" id="error_email">Not a valid E-Mail</span>
+                                <span class="error_text" id="error_email">Not a valid email</span>
                                 <input type="tel" id="input-phone" class="user_input styled_input" placeholder="Phone Number" value="${c.phoneNumber}" required oninput="limitInputLength(this, 17)"><br>
                                 <span class="error_text" id="error_phone">Not a valid phone number</span>
                             </div>

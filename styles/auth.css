@@ -193,11 +193,11 @@
 }
 
 .input_error {
-  border: 2px solid #ff3d00 !important;
+  border: 2px solid #f175fa !important;
 }
 
 .error_message {
-  color: #ff3d00;
+  color: #f175fa;
   font-size: 0.85rem;
   margin-top: 4px;
   display: none;
@@ -210,21 +210,21 @@
   left: 0;
   width: 100%;
   text-align: left;
-  color: #ff3d00;
+  color: #f175fa;
   font-size: 14px;
   display: none;
   font-size: 0.85rem;
 }
 
 .input_wrapper input.error {
-  border: 2px solid #ff3d00;
+  border: 2px solid #f175fa;
 }
 
 #confirm_password_error {
   position: absolute;
   bottom: -20px;
   left: 0;
-  color: #ff3d00;
+  color: #f175fa;
   display: none;
 }
 

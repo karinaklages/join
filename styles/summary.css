@@ -1,4 +1,4 @@
-.order_summary_information{
+.order_summary_information {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -7,7 +7,7 @@
     margin-bottom: 50px;
 }
 
-.style_boxes{
+.style_boxes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.summary_header{
+.summary_header {
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -27,27 +27,27 @@
     gap: 20px;
 }
 
-.divider_header{
+.divider_header {
     border-right: 3px solid #29abe2;
     height: 55px;
     margin: 16px;
 }
 
-.text_header{
+.text_header {
     font-size: 27px;
 }
 
-.order_todo_done_box{
+.order_todo_done_box {
     display: flex;
     gap: 20px;
 }
 
-.style_todo_done_box{
+.style_todo_done_box {
     width: 264px;
     gap: 30px;
 }
 
-.style_todo_done_box:hover{
+.style_todo_done_box:hover {
     background-color: #2a3647;
     color: white;
     transform: scale(1.05);
@@ -55,37 +55,42 @@
     cursor: pointer;
 }
 
-.style_todo_box_hover:hover img{
+.style_todo_box_hover:hover img {
     content: url("../assets/img/check_white_circle.svg");
 }
 
-.style_done_box_hover:hover img{
+.style_done_box_hover:hover img {
     content: url("../assets/img/edit_white_circle.svg");
 }
 
-.img_summary_edit_check_icon{
+.img_summary_edit_check_icon {
     height: 60px;
     width: 60px;
 }
 
-.order_number_text{
+.board_priority_btn {
+    height: 60px;
+    width: 60px;
+}
+
+.order_number_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.summary_number{
+.summary_number {
     font-size: 64px;
     font-family: 'latin_600';
 }
 
-.box_prio_tickets{
+.box_prio_tickets {
     gap: 20px;
     width: 548px;
 }
 
-.box_prio_tickets:hover{
+.box_prio_tickets:hover {
     background-color: #2a3647;
     transform: scale(1.02);
     transition: transform 0.1s ease ;
@@ -102,24 +107,28 @@
     color: white;
 }
 
-.counter_prio_tickets{
+.counter_prio_tickets {
     display: flex;
     gap: 30px;
     justify-content: center;
     align-items: center;
 }
 
-.divider_prio_box{
+.divider_prio_box {
     border-right: 2px solid #d1d1d1;
     height: 100px;
     margin: 20px;
 }
 
-.box_prio_tickets:hover .divider_prio_box{
+.break {
+  display: inline;
+}
+
+.box_prio_tickets:hover .divider_prio_box {
     border-color: white;
 }
 
-.deadline_information{
+.deadline_information {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,23 +136,23 @@
     gap: 10px;
 }
 
-.date_of_deadline{
+.date_of_deadline {
     font-family: 'latin_700';;
     font-weight: 700;
     font-size: 21px;
     color: #2a3647;
 }
 
-.order_ticket_box_below{
+.order_ticket_box_below {
     display: flex;
     gap: 20px;
 }
 
-.boxes_last_row{
+.boxes_last_row {
     width: 170px;
 }
 
-.boxes_last_row:hover{
+.boxes_last_row:hover {
     background-color: #2a3647;
     color: white;
     transform: scale(1.05);
@@ -151,16 +160,16 @@
     cursor: pointer;
 }
 
-.style_greeting_text{
+.style_greeting_text {
     font-family: 'latin_500';
     font-size: 48px;
 }
 
-.style_username{
+.style_username {
     color: #29abe2;
 }
 
-.style_text{
+.style_text {
     text-align: center;
     font-family: 'latin_400';
     font-weight: 400;
@@ -168,7 +177,7 @@
     color: #2a3647;
 }
 
-.style_prio_area{
+.style_prio_area {
     text-align: center;
     font-family: 'latin_400';
     font-weight: 400;
@@ -212,12 +221,14 @@
     text-align: center;
 }
 
-.mobile_greeting_overlay.style_greeting_text {
+.mobile_greeting_overlay,
+.style_greeting_text {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-.mobile_greeting_overlay .style_username {
+.mobile_greeting_overlay,
+.style_username {
     font-size: 48px;
     color: #29abe2;
 }

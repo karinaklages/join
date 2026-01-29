@@ -117,8 +117,8 @@ function updateBtn(els) {
     els.btn.style.color = 'white';
     els.btn.style.cursor = 'pointer';
   } else {
-    els.btn.style.backgroundColor = '#999';
-    els.btn.style.color = '#eee';
+    els.btn.style.backgroundColor = '#b5b5b5';
+    els.btn.style.color = '#f5f5f5';
     els.btn.style.cursor = 'not-allowed';
   }
 }
@@ -152,7 +152,7 @@ function handlePasswordMatch(els) {
     if (confirm.length > 0) {
       els.confirm.classList.add('error');
       els.errorMsg.style.display = 'block';
-      els.errorMsg.textContent = "Your passwords don't match.";
+      els.errorMsg.textContent = "Your passwords don't match";
     }
   } else {
     els.confirm.classList.remove('error');

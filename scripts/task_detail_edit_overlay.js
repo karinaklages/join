@@ -199,7 +199,7 @@ function highlightRequiredEditFields() {
     : (dueDateEdit.classList.remove('error'),
       document.querySelector('.required_message[data-for="id_due_date_task_detail_edit"]').style.display = "none");
   categorySpan.textContent.trim() === "Select task category"
-    ? (categorySpan.style.color = "#FF3D00")
+    ? (categorySpan.style.color = "#f175fa")
     : (categorySpan.style.color = "");
 }
 

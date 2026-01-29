@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .summary_header h1 {
@@ -46,13 +46,17 @@
     margin: 10px;
   }
 
+  .counter_prio_tickets,
+  .style_todo_done_box {
+    gap: 20px;
+  }
+
   .deadline_information {
     text-align: center;
     width: auto;
   }
 
   .counter_prio_tickets {
-    gap: 8px;
     width: 150px;
     margin-left: 8px;
   }
@@ -101,7 +105,6 @@
 
   .summary_header {
     margin-top: 50px;
-    margin-bottom: 20px;
   }
 
   .style_greeting_text {
@@ -145,7 +148,6 @@
     max-width: unset !important;
     height: 110px;
     margin-left: 0;
-
     flex: 1;
   }
 
@@ -159,7 +161,7 @@
   }
 
   .divider_prio_box {
-    height: 50px;
+    height: 60px;
     align-self: center;
   }
 
@@ -184,10 +186,6 @@
   .style_prio_area {
     white-space: nowrap;
   }
-
-  .box_prio_tickets {
-    gap: 0;
-  }
 }
 
 @media (max-width: 430px) {
@@ -206,6 +204,24 @@
     width: 35px;
     height: 35px;
   }
+
+  .counter_prio_tickets,
+  .style_todo_done_box {
+    gap: 10px;
+  }
+
+  .divider_prio_box {
+    margin: 5px;
+  }
+
+  .deadline_information {
+    margin-left: -10px;
+    gap: 6px;
+  }
+
+  .counter_prio_tickets {
+    margin-right: -10px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -213,35 +229,22 @@
     max-width: 140px;
   }
 
-  .box_prio_tickets {
-    max-width: 300px;
-  }
-
   .boxes_last_row {
     max-width: 85px;
   }
-
-  .margin_left {
-    margin-left: 0 !important;
-  }
-
-  main.content_wrapper {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
 }
 
-@media (max-width: 334px) {
-  .box_prio_tickets {
-    padding: 0;
+@media (max-width: 350px) {
+  .break {
+    display: none;
+  }
+
+  .deadline_information{
+    margin-right: 14px !important;
+    white-space: nowrap !important;
   }
 
   .counter_prio_tickets {
-    width: 110px;
-    margin-left: 0;
-  }
-
-  .divider_prio_box {
-    margin: 2px;
+    margin-left: 0px;
   }
 }

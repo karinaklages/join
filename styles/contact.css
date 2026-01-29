@@ -375,7 +375,7 @@
 .error_text {
     position: relative;
     top: -25px;
-    color: red;
+    color: #f175fa;
     height: 12px;
     font-size: 12px;
     visibility: hidden;

@@ -5,11 +5,9 @@ function taskDetailTemplate(taskContent, taskID, taskIndex) {
         <div id="category_label_task_details_${taskID}" class="story_task_btn">${taskContent.category}</div>
         <img class="close_btn" src="./assets/img/x.svg" alt="Close Button" onclick="closeTaskDetailDialog()" role="button" aria-label="Schließen">
       </div>
-
       <div class="scroll_container">
         <span id="task_detail_title_${taskID}" class="task_detail_title">${taskContent.title}</span>
-        <p id="task_detail_description_${taskID}" class="task_detail_description">${taskContent.description}</p>
-              
+        <p id="task_detail_description_${taskID}" class="task_detail_description">${taskContent.description}</p>   
         <table class="recommender_table" aria-label="Page and Recipe Recommender details">
           <tbody>
             <tr>
@@ -29,12 +27,10 @@ function taskDetailTemplate(taskContent, taskID, taskIndex) {
         </table>
         <div id="assignees_task_details_${taskID}" class="assigned_user">
         </div>
-
         <p class="task_detail_description">Subtasks:</p>
         <div id="subtasks_task_detail_list">
         </div>
       </div>
-
       <div class="bottom_area">
         <div class="task_detail_btn_area no_scroll">
           <button class="delete_edit_btn" onclick="deleteTask('${taskID}')">
@@ -86,7 +82,6 @@ function taskEditDialogTemplate(taskID, index) {
       <div class="close_btn_container_task_detail_edit no_scroll_edit">
         <img class="close_btn" src="./assets/img/x.svg" alt="Close Button" onclick="closeTaskDetailEditDialog('edit')" role="button" aria-label="Schließen">
       </div>
-
       <form class="form_content" id="taskDetailEditForm" novalidate>
         <div class="scroll_container_edit">
           <section class="form_wrapper_edit">
@@ -95,17 +90,14 @@ function taskEditDialogTemplate(taskID, index) {
               <input type="text" class="task_detail_edit_input styled_input_edit validate_edit_required" id="id_title_task_detail_edit" placeholder="Enter a title" oninput="handleRequiredMessage(this); limitInputLength(this, 30)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
               <span class="required_message required_message_edit" data-for="id_title_task_detail_edit">This field is required</span><br>
             </div>
-
             <label for="id_description_task_detail_edit" class="label_text_edit">Description</label><br>
             <textarea class="task_detail_edit_description styled_input_edit_description" id="id_description_task_detail_edit" placeholder="Enter a description" oninput="limitInputLength(this, 90)"></textarea><br>
-              
             <div class="form_required_wrapper edit_wrapper">
               <label for="id_due_date_task_detail_edit" class="label_text_edit">Due Date<sup>*</sup></label><br>
               <input type="date" class="task_detail_edit_input styled_input_edit validate_edit_required" id="id_due_date_task_detail_edit" oninput="handleRequiredMessage(this)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
               <span class="required_message required_message_edit" data-for="id_due_date_task_detail_edit">This field is required</span><br>
             </div>
           </section>
-
           <section>
             <label class="label_text_edit">Priority</label><br>
             <div class="priority_options_edit">
@@ -122,7 +114,6 @@ function taskEditDialogTemplate(taskID, index) {
                 <img id="id_icon_low_task_task_detail" class="icon hover" src="./assets/img/prio_low_green.svg" alt="Priority Low">
               </button>
             </div>
-
             <label class="label_text_edit">Assigned to</label><br>
             <div class="dropdown" data-type="contacts">
               <div class="dropdown_input task_detail_edit_input styled_input_edit mobile_editing" onclick="toggleListTasks('contacts', 'edit')">
@@ -134,7 +125,6 @@ function taskEditDialogTemplate(taskID, index) {
             </div>
             <div class="assigned_contacts_row" id="assigned_contacts_row_edit"></div>
             <div class="input_spacer"></div>
-
             <section class="subtask_wrapper">
               <label for="subtasks" class="label_text_edit">Subtasks</label><br>
               <div class="input_container">
@@ -153,7 +143,6 @@ function taskEditDialogTemplate(taskID, index) {
             </section>
           </section>
         </div>
-
         <div class="task_detail_edit_btn">
           <button id="editTaskSubmitBtn" type="click" class="ok_btn", '${index}')">Ok<img src="./assets/img/check_white.svg" alt="Edit Button"></button>
         </div>

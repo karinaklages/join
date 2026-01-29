@@ -174,7 +174,7 @@ function loadPriorityIcon(taskContent, taskID) {
 function loadCategoryLabelColor(taskContent, taskID) {
     let categoryLabel = document.getElementById("category_label_" + taskID);
     if (taskContent.category === "Technical Task") {
-        categoryLabel.style.backgroundColor = '#781ad7';
+        categoryLabel.style.backgroundColor = '#8331d5';
     } else if (taskContent.category === "User Story") {
         categoryLabel.style.backgroundColor = '#1fd7c1';
     } else {

@@ -18,7 +18,7 @@ function addContactButtonTemplate() {
         <div class="button_container">
             <button class="contact_btn" id="addNewContactBtn" onclick="openAddContactDialog()">
                 <span>Add new Contact</span>
-                <img src="./assets/img/person_add_white.svg" alt="add Person" />
+                <img src="./assets/img/person_add_white.svg" alt="add Person">
             </button>
         </div>
     `;
@@ -48,10 +48,10 @@ function contactInitialsTemplate(c) {
                 <div class="changebtns" id="changeContactBtns">
                     <div id="changebtnsPopover">
                         <button id="editContactBtn" class="edit_btn" onclick="openEditContactDialog('${c.id}', this)">
-                            <img src="./assets/img/edit.svg" alt="Edit" />Edit
+                            <img src="./assets/img/edit.svg" alt="Edit">Edit
                         </button>
                         <button id="deleteContactBtn" class="delete_btn" onclick="deleteContact('${c.id}')">
-                            <img src="./assets/img/delete.svg" alt="Delete" />Delete
+                            <img src="./assets/img/delete.svg" alt="Delete">Delete
                         </button>
                     </div>
                 </div>

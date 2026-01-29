@@ -1,23 +1,23 @@
 let colorIndex = 0;
 
 const colors = [
-  "#f0abfc",
-  "#e879f9",
-  "#b578fb",
-  "#781ad7",
+  "#f4b8fe",
+  "#f175fa",
+  "#b279f5",
+  "#8331d5",
   "#29abe2",
   "#1fd7c1",
-  "#847ce1",
-  "#cd88ed",
-  "#2ba296",
-  "#1e95a7",
-  "#146178",
-  "#6bc4df",
+  "#877fe3",
+  "#d992fa",
+  "#34a59a",
+  "#1999ac",
+  "#0f657f",
+  "#7bd2ec",
 ]
 
 
 // FIREBASE
-const BASE_URL = "https://join-f5da0-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL = "https://join-0126-default-rtdb.europe-west1.firebasedatabase.app/";
 
 
 // GET DATA

@@ -8,21 +8,20 @@ function taskListElementTemplate(taskID, index) {
       <p data-task-id="${taskID}" class="style_text_description_card">${taskList[index].task.description}</p>
       <div id="progress_container_${taskID}" class="order_progressbar_counter">
         <div class = tooltip width_progressbar_counter_container>
-        <div class="style_progress_bar">
-          <div id="progressbar_${taskID}" class="progressbar_filled tooltip" style="width: 0%;"><p class ="tooltiptext"> <span id="tooltip_done_subtasks_${taskID}"></span>/<span id="tooltip_all_subtasks_${taskID}"></span>&nbsp;Subtasks completed</p></div>
-        </div>
+          <div class="style_progress_bar">
+            <div id="progressbar_${taskID}" class="progressbar_filled tooltip" style="width: 0%;"><p class ="tooltiptext"><span id="tooltip_done_subtasks_${taskID}"></span>/<span id="tooltip_all_subtasks_${taskID}"></span>&nbsp;Subtasks completed</p></div>
+          </div>
         </div>
         <div class="order_counter_progress">
-        <p id="counterDoneSubtasks_${taskID}")></p>
-        <p>/</p>
-        <p id="counterAllSubtasks_${taskID}"></p>
-        <p>&nbsp;Subtasks</p>                      
+          <p id="counterDoneSubtasks_${taskID}")></p>
+          <p>/</p>
+          <p id="counterAllSubtasks_${taskID}"></p>
+          <p>&nbsp;Subtasks</p>                      
         </div>
-        </div>    
-        <div class="order_elements_user_icon_priolable"> 
-          <div id="board_assignee_${taskID}" class="order_user_icons_task_card">
-          </div>
-          <img id="icon_priority_${taskID}" src="" alt="">
+      </div>    
+      <div class="order_elements_user_icon_priolable"> 
+        <div id="board_assignee_${taskID}" class="order_user_icons_task_card"></div>
+        <img id="icon_priority_${taskID}" src="" alt="">
       </div>
     </div>
   `;

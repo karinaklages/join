@@ -17,7 +17,6 @@ function summaryContentTemplate(userName, greeting) {
                     </div>
                 </div>
             </section>
-            
             <section class="box_prio_tickets margin_left style_boxes" onclick="goToBoardPage()">
                  <div class="counter_prio_tickets">
                     <img class="board_priority_btn" src="./assets/img/summary_prio_icon.svg" alt="Priority Icon">
@@ -32,7 +31,6 @@ function summaryContentTemplate(userName, greeting) {
                     <p class="style_prio_area">Upcoming Deadline</p>
                 </div>
             </section>
-
             <section class="order_ticket_box_below margin_left">
                  <div class="order_number_text style_boxes boxes_last_row" onclick="goToBoardPage()">
                         <p id="id_summary_allTasks" class="summary_number"></p>
@@ -48,7 +46,6 @@ function summaryContentTemplate(userName, greeting) {
                     </div>
             </section>
         </div>
-
         <div id="id_summary_greeting_container" class="order_greeting_username">
             <p class="style_greeting_text">${greeting}</p>
             <h1 class="style_username">${userName}</h1>

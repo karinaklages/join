@@ -233,7 +233,6 @@ function setupDateClickBehavior() {
         input.addEventListener('click', function (e) {
             if ((this.offsetWidth - e.offsetX) < 45 && e.isTrusted) {
                 if (!this.disabled && !this.readOnly && this.offsetParent !== null) {
-                    e.preventDefault();
                     this.showPicker?.();
                 }
             }

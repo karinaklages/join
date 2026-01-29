@@ -9,16 +9,3 @@ Join is part of the Developer Akademie's training programme for software develop
 <br><br>
 
 ###
-
-![Join](./assets/img/join-1.jpg)<br>
-
-![Join](./assets/img/join-2.jpg)<br>
-
-![Join](./assets/img/join-3.jpg)<br>
-
-![Join](./assets/img/join-4.jpg)<br>
-
-![Join](./assets/img/join-5.jpg)<br>
-
-![Join](./assets/img/join-6.jpg)
-

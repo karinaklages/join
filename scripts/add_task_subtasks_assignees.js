@@ -12,7 +12,6 @@ let selectedAssigneesEdit = [];
  * Checks whether the contact list is already loaded and loads it if necessary.
  * If the contacts are not yet available, data is fetched from Firebase before displaying the contacts in the task view.
  *
- * @async
  * @function checkContactList
  * @param {string} element - The element identifier used to determine which list to check.
  * @returns {Promise<void>} - A promise that resolves when the contact list has been checked and rendered.

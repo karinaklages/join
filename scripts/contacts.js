@@ -8,8 +8,8 @@ const usersArray = [];
  * Initializes the "Contacts" view.
  */
 function initContacts() {
-    init(),
-        renderContactList()
+    init();
+    renderContactList();
 }
 
 
@@ -34,10 +34,10 @@ function setContactActive(id, element) {
         return;
     }
     element.classList.add("active_contact");
-    minimizeContactListon950px()
-    renderContactInfo(selectedContact)
-    renderMobileClickedContact()
-    slideContactInfo()
+    minimizeContactListon950px();
+    renderContactInfo(selectedContact);
+    renderMobileClickedContact();
+    slideContactInfo();
 }
 
 
@@ -62,9 +62,9 @@ function minimizeContactListon950px() {
  * @param {Object} selectedContact - The contact object containing the information to display.
  */
 function renderContactInfo(selectedContact) {
-    const cInfo = document.getElementById('contact_info')
-    cInfo.innerHTML = ""
-    cInfo.innerHTML = contactHeadlineTemplate() + contactInitialsTemplate(selectedContact) + contactInfoTemplate(selectedContact)
+    const cInfo = document.getElementById('contact_info');
+    cInfo.innerHTML = "";
+    cInfo.innerHTML = contactHeadlineTemplate() + contactInitialsTemplate(selectedContact) + contactInfoTemplate(selectedContact);
 }
 
 
@@ -77,8 +77,8 @@ function renderContactInfo(selectedContact) {
  */
 function renderLocalContactInfo(id) {
     const selectedContact = contactsArray.find(entry => entry.id == id);
-    renderContactInfo(selectedContact)
-    slideContactInfo()
+    renderContactInfo(selectedContact);
+    slideContactInfo();
 }
 
 
@@ -92,7 +92,7 @@ function slideContactInfo() {
         const bigContactInfo = document.getElementById('contact_big_information')
         bigContact.classList.toggle('slideactive')
         bigContactInfo.classList.toggle('slideactive')
-    })
+    });
 }
 
 
@@ -134,7 +134,7 @@ function changeBtnsPopover() {
         if (!changeContactBtns.contains(e.target)) {
             changeContactBtns.classList.remove('active_popover');
         }
-    })
+    });
 }
 
 
@@ -195,8 +195,7 @@ function sortContactsByFirstName(element) {
 
 
 /**
- * Gets the contact list items
- * @returns contact list items
+ * Gets the contact list items data from Firebase.
  */
 async function getContactListData() {
     return await loadFirebaseData('contacts');
@@ -224,8 +223,9 @@ function renderLocalContactList() {
 
 
 /**
- * Updates the Firebase users table of
- * @param {string} id user-id
+ * Updates the Firebase users table.
+ * 
+ * @param {string} id
  * @param {object} userData 
  */
 async function updateUserFromContact(id, userData) {
@@ -247,7 +247,8 @@ async function updateUserFromContact(id, userData) {
 
 /**
  * Checks if a contact exists in the user list and updates the user data if found.
- * @returns {Promise<void>} Resolves when the user data has been updated, or immediately if contact not found
+ * 
+ * @returns {Promise<void>} - Resolves when the user data has been updated, or immediately if contact not found.
  */
 async function checkContactInUser(oldName, oldMail, newName, newMail) {
     await getUsersData()
@@ -278,12 +279,9 @@ function updateLocalStorage(newName, newMail) {
 
 /**
  * Checks if the active user from localStorage exists in the contacts array and marks it.
+ * Retrieves the active user from localStorage, searches for a matching contact by email, and verifies that the user's name matches the contact's name. If a match is found, appends "(Ich)" to the contact's list item and applies a CSS class for styling.
  * 
- * Retrieves the active user from localStorage, searches for a matching contact by email,
- * and verifies that the user's name matches the contact's name. If a match is found,
- * appends "(Ich)" to the contact's list item and applies a CSS class for styling.
- * 
- * @returns {boolean|undefined} Appends " (Ich)" to the contact's list item and applies a CSS class for styling if the contact is found and name matches.
+ * @returns {boolean|undefined} - Appends "(Ich)" to the contact's list item and applies a CSS class for styling if the contact is found and name matches.
  */
 function checkActiveUser() {
     let user = JSON.parse(localStorage.getItem('activeUser'));
@@ -324,7 +322,7 @@ async function renderContactList() {
         container.innerHTML += loadContactListItem(contactsArray[i]);
     }
     if (checkActiveUser() != false) {
-        return
+        return;
     }
 }
 
@@ -391,7 +389,6 @@ async function deleteContactFromFirebase(contactID) {
         let userStorage = await fetch(BASE_URL + "contacts/" + contactID + ".json", {
             method: "DELETE",
         });
-
     } catch (error) {
         console.error("Fehler beim Updaten:", error);
     }

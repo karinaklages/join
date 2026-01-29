@@ -21,6 +21,7 @@ function getElementsUser() {
 
 /**
  * Toggles the visibility of a password input and updates the icon.
+ * 
  * @param {HTMLInputElement} input - The input element (password field).
  * @param {HTMLImageElement} icon - The icon element to update.
  */
@@ -54,6 +55,7 @@ function updateIconOnInput(input, icon) {
 
 /**
  * Initializes password toggle functionality for a given input and icon.
+ * 
  * @param {string} inputId - The ID of the password input.
  * @param {string} iconId - The ID of the toggle icon.
  */
@@ -70,8 +72,8 @@ function setupToggle(inputId, iconId) {
 
 
 /**
- * Checks if the email format matches pattern: something@domain.tld
- * Requires a dot and at least 2 characters at the end (e.g., .de, .com)
+ * Checks if the email format matches pattern: something@domain.tld.
+ * Requires a dot and at least 2 characters at the end (e.g., .de, .com).
  */
 function checkEmailFormat(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
@@ -81,6 +83,7 @@ function checkEmailFormat(email) {
 
 /**
  * Checks if all required form fields are valid.
+ * 
  * @param {Object} els - Object containing form elements.
  * @param {HTMLInputElement} els.name - Name input field.
  * @param {HTMLInputElement} els.email - Email input field.
@@ -102,6 +105,7 @@ function isValid(els) {
 
 /**
  * Updates the state and style of the submit button based on form validity.
+ * 
  * @param {Object} els - Object containing form elements including the button.
  * @param {HTMLButtonElement} els.btn - The submit button.
  */
@@ -205,9 +209,7 @@ function initSignupForm() {
 
 /**
  * Handles the signup button click:
- * Prevents default form submission.
- * Sends user data to storage. Shows a confirmation toast.
- * Redirects to home page after 2 seconds.
+ * Prevents default form submission. Sends user data to storage. Shows a confirmation toast. Redirects to home page after 2 seconds.
  */
 initSignupForm();
 document.getElementById('signup_btn').addEventListener("click", async function (event) {

@@ -228,7 +228,6 @@ async function createContact() {
 /**
  * Renders the contact list and activates the most recently added contact.
  *
- * @async
  * @returns {Promise<void>}
  */
 async function showNewContact() {
@@ -243,7 +242,7 @@ async function showNewContact() {
  * Validates the "Add Contact" form inputs and enables/disables the submit button.
  * Checks name, email, and phone number validity.
  *
- * @returns {boolean} True if the form is valid, otherwise false.
+ * @returns {boolean} - True if the form is valid, otherwise false.
  */
 function validateAddContactForm() {
   const name = document.getElementById('id_contact_name')?.value.trim();
@@ -263,7 +262,7 @@ function validateAddContactForm() {
  * Validates the "Edit Contact" form inputs and enables/disables the save button.
  * Checks name, email, and phone number validity.
  *
- * @returns {boolean} True if the form is valid, otherwise false.
+ * @returns {boolean} - True if the form is valid, otherwise false.
  */
 function validateEditContactForm() {
   const contactName = document.getElementById('input-name')?.value.trim();
@@ -287,7 +286,6 @@ function handleInputErrorMessages(name, mail, phone) {
   const nameError = document.getElementById('error_name')
   const emailError = document.getElementById('error_email')
   const phoneError = document.getElementById('error_phone')
-
   nameError.style.visibility = !name ? "visible" : "hidden"
   emailError.style.visibility = !mail ? "visible" : "hidden"
   phoneError.style.visibility = !phone ? "visible" : "hidden"
@@ -303,7 +301,6 @@ function handleInputError(nameinput, mailinput, phoneinput) {
   const addContactPhone = document.getElementById('id_contact_phone') || document.getElementById('input-phone')
   const addContactEmail = document.getElementById('id_contact_email') || document.getElementById('input-email')
   const errorClass = "error_border"
-
   if (addContactName) addContactName.classList[nameinput ? "remove" : "add"](errorClass)
   if (addContactEmail) addContactEmail.classList[mailinput ? "remove" : "add"](errorClass)
   if (addContactPhone) addContactPhone.classList[phoneinput ? "remove" : "add"](errorClass)

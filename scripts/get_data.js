@@ -4,7 +4,6 @@
  * Sets the task status (default is "todo").
  * Calls `switchTaskData` to save the new task in Firebase and update the UI.
  * 
- * @async
  * @param {string} [status="todo"] - The initial status of the task.
  * @param {string} HTMLid - The HTML container ID for the task inputs.
  */
@@ -50,9 +49,7 @@ function getTaskCategory(HTMLid) {
 
 /**
  * Collects all subtasks from the task creation/edit list in the DOM.
- * Generates a unique ID for each subtask.
- * Sets all subtasks as incomplete (done: false) by default.
- * Returns an object mapping subtask IDs to their text and status, or an empty string if none exist.
+ * Generates a unique ID for each subtask. Sets all subtasks as incomplete (done: false) by default. Returns an object mapping subtask IDs to their text and status, or an empty string if none exist.
  * 
  * @returns {Object|string} The structured subtasks object or "" if no subtasks exist.
  */
@@ -109,8 +106,7 @@ function getAssignee() {
 
 /**
  * Retrieves the selected assignees when editing a task.
- * Uses the `selectedAssigneesEdit` array to build the result.
- * Returns an object mapping assignee IDs to their details, or an empty string if none are selected.
+ * Uses the `selectedAssigneesEdit` array to build the result. Returns an object mapping assignee IDs to their details, or an empty string if none are selected.
  * 
  * @returns {Object|string} The selected assignees object or "" if no assignees are selected.
  */
@@ -132,8 +128,7 @@ function getAssigneeInEdit() {
 
 /**
  * Saves or updates a task in Firebase and optionally updates the UI.
- * If `HTMLid` is "task_detail", it updates an existing task using PUT.
- * Otherwise, it creates a new task using POST.
+ * If `HTMLid` is "task_detail", it updates an existing task using PUT. Otherwise, it creates a new task using POST.
  */
 async function switchTaskData(titleTask = "", descriptionTask = "", dueDateTask = "", priorityTask = "", assignedToTask = "", categoryTask = "", subtasksTask = "", statusTask = "", HTMLid, taskID) {
   let taskData = {
@@ -173,8 +168,7 @@ function getElementsContacts() {
 
 /**
  * Collects contact data from the input fields and saves it.
- * Generates a random color and initials for the contact.
- * Calls `switchContactsData` to update the contact in Firebase and local state.
+ * Generates a random color and initials for the contact. Calls `switchContactsData` to update the contact in Firebase and local state.
  */
 async function getContactData() {
   const elements = getElementsContacts();
@@ -189,11 +183,8 @@ async function getContactData() {
 
 /**
  * Saves the changes made to a task in the task detail edit form.
- * Collects updated task fields from the DOM.
- * Prepares subtasks, priority, assignees, and status.
- * Calls `switchTaskData` to update the task in Firebase and local state.
+ * Collects updated task fields from the DOM. Prepares subtasks, priority, assignees, and status. Calls `switchTaskData` to update the task in Firebase and local state.
  * 
- * @async
  * @param {string} taskID - The unique ID of the task being edited.
  * @param {number} index - The index of the task in the local task array.
  * @param {string} HTMLid - The HTML container ID for the task (used for UI updates).
@@ -213,9 +204,7 @@ async function saveChangesTask(taskID, index, HTMLid) {
 
 /**
  * Collects subtasks from the task edit form.
- * Reads existing subtasks from the DOM.
- * Assigns existing IDs if present, or generates new UUIDs.
- * Returns an object mapping subtask IDs to text and completion status, or an empty string if no subtasks exist.
+ * Reads existing subtasks from the DOM. Assigns existing IDs if present, or generates new UUIDs. Returns an object mapping subtask IDs to text and completion status, or an empty string if no subtasks exist.
  * 
  * @returns {Object|string} The structured subtasks object or empty string if no subtasks.
  */
@@ -248,6 +237,7 @@ function getSubtaskEditTask() {
 
 
 /** Extracts initials from a contact's name.
+ * 
  * @param {string} contactName - The full name of the contact.
  * @returns {string} The initials of the contact in uppercase. */
 
@@ -260,7 +250,6 @@ function getContactInitials(contactName) {
 /**
  * Retrieves all task IDs where a specific contact is assigned.
  * 
- * @async
  * @param {string|number} contactId - The ID of the contact/assignee.
  * @returns {Promise<string[]>} An array of task IDs where the contact is assigned.
  */
@@ -286,7 +275,6 @@ async function getTasksWithAssignee(contactId) {
 /**
  * Safely updates an assignee's name and initials in all tasks where they are assigned.
  * 
- * @async
  * @param {string|number} contactId - The ID of the assignee to update.
  * @param {string} newName - The new name of the assignee.
  */
@@ -343,7 +331,7 @@ async function getUserData() {
   let userEmail = elements.email.value;
   let userPassword = elements.pass.value;
   let userColor = getRandomColor();
-  let userInitials = getContactInitials(userName)
+  let userInitials = getContactInitials(userName);
   await switchUserData(userName, userEmail, userColor, elements, userPassword, userInitials);
   await switchContactsData(userName, userEmail, userColor, userInitials);
 }

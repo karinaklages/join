@@ -3,9 +3,9 @@
  * Initializes the "Board" view.
  */
 function initBoard() {
-    init(),
-        loadContentBoard(),
-        loadEventlistener('overlay')
+    init();
+    loadContentBoard();
+    loadEventlistener('overlay');
 }
 
 
@@ -15,7 +15,7 @@ function initBoard() {
  */
 async function loadContentBoard() {
     resetBoardHTML();
-    taskList = []
+    taskList = [];
     await loadFirebaseData('tasks');
     await loadFirebaseData('contacts');
     checkStatusTask();
@@ -314,7 +314,6 @@ function findAndDisplayTasks(searchTerm) {
         let taskContent = taskItem.task;
         let title = taskContent.title.toLowerCase();
         let description = taskContent.description.toLowerCase();
-
         if (title.includes(searchTerm) || description.includes(searchTerm)) {
             loadBoardColumn(taskItem.id, taskContent, index, taskContent.statusTask);
             matchCount++;

@@ -92,6 +92,7 @@ function loadPrefillPriority(currentTask){
 
 /**
  * Prefills the assignees section of the task edit form.
+ * 
  * @param {Object} currentTask - The task object.
  */
 function loadPrefillAssignee(currentTask) {
@@ -116,6 +117,7 @@ function loadPrefillAssignee(currentTask) {
 
 /**
  * Prefills the subtask list of the task edit form.
+ * 
  * @param {Object} currentTask - The task object.
  */
 function loadPrefillSubtasks(currentTask){
@@ -204,8 +206,7 @@ function highlightRequiredEditFields() {
 
 /**
  * Initializes form event listeners for task editing.
- * Enables or disables the submit button based on required field validation.
- * Prevents default form submission. Saves the task and closes the edit dialog when validation passes.
+ * Enables or disables the submit button based on required field validation. Prevents default form submission. Saves the task and closes the edit dialog when validation passes.
  */
 function  loadEventlistenerForm(){
   const form = document.querySelector('.form_wrapper_edit');
@@ -227,8 +228,7 @@ function  loadEventlistenerForm(){
 
 /**
  * Initializes the event listener for the task edit dialog submit button.
- * Replaces the submit button to remove old event listeners.
- * Saves the edited task and updates the board. Closes the task edit dialog after saving.
+ * Replaces the submit button to remove old event listeners. Saves the edited task and updates the board. Closes the task edit dialog after saving.
  * 
  * @param {string} taskID - The ID of the task being edited.
  * @param {number} index - The index of the task in the task list.

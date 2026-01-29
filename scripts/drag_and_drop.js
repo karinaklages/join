@@ -82,8 +82,7 @@ function handleTouchMove(e) {
 
 /**
  * Calculates the vertical auto-scroll speed based on touch position.
- * Scrolls up when touch is near the top edge.
- * Scrolls down when touch is near the bottom edge.
+ * Scrolls up when touch is near the top edge. Scrolls down when touch is near the bottom edge.
  * Returns 0 when touch is outside scroll zones.
  * 
  * @param {number} y - The vertical touch position (clientY).
@@ -105,11 +104,9 @@ function calculateScrollSpeed(y) {
 
 /**
  * Handles the end of a touch interaction.
- * Clears the long-press timer.
- * Finalizes the mobile drag-and-drop operation if active.
+ * Clears the long-press timer. Finalizes the mobile drag-and-drop operation if active.
  * 
- * @async
- * @param {TouchEvent} e - The touchend event.
+ * @param {TouchEvent} e
  */
 async function handleTouchEnd(e) {
   clearTimeout(dragTimer);
@@ -122,10 +119,7 @@ async function handleTouchEnd(e) {
 
 /**
  * Starts the mobile drag operation for a task card.
- * Activates mobile dragging state.
- * Triggers haptic feedback if supported.
- * Extracts task index and ID from the ondragstart attribute.
- * Creates a visual clone of the dragged card.
+ * Activates mobile dragging state. Triggers haptic feedback if supported. Extracts task index and ID from the ondragstart attribute. Creates a visual clone of the dragged card.
  * 
  * @param {TouchEvent} e - The touchstart event.
  * @param {HTMLElement} card - The task card element being dragged.
@@ -146,8 +140,7 @@ function startMobileDrag(e, card) {
 
 /**
  * Creates a visual clone of the dragged element for mobile drag feedback.
- * Copies size and position from the original element.
- * Adds a clone-specific CSS class.
+ * Copies size and position from the original element. Adds a clone-specific CSS class.
  * 
  * @param {HTMLElement} original - The original task card element.
  */
@@ -182,9 +175,7 @@ function moveClone(x, y) {
 
 /**
  * Detects the board column currently under the touch position.
- * Temporarily hides the drag clone to detect underlying elements.
- * Highlights the detected column.
- * Stores the current target column for drop handling.
+ * Temporarily hides the drag clone to detect underlying elements. Highlights the detected column. Stores the current target column for drop handling.
  * 
  * @param {number} x - The horizontal touch position (clientX).
  * @param {number} y - The vertical touch position (clientY).
@@ -224,8 +215,7 @@ async function finishMobileDrop() {
 
 /**
  * Initiates a desktop drag operation for a task card.
- * Sets the currently dragged task index and ID.
- * Adds a visual class to indicate the card is being dragged.
+ * Sets the currently dragged task index and ID. Adds a visual class to indicate the card is being dragged.
  * 
  * @param {DragEvent} event - The dragstart event.
  * @param {number} index - The index of the task in the local task array.
@@ -273,11 +263,9 @@ function allowDrop(event) {
 
 /**
  * Handles dropping a task into a new category.
- * Updates the task status in Firebase.
- * Reloads the board content to reflect changes.
+ * Updates the task status in Firebase. Reloads the board content to reflect changes.
  * 
- * @async
- * @param {string} category - The target category/status for the dropped task.
+ * @param {string} category - The target category for the dropped task.
  */
 async function drop(category) {
   await updateTaskStatus(category);

@@ -9,8 +9,8 @@ const priorities = [
  * Initializes the "Add Task" view.
  */
 function initAddTask() {
-  init(),
-  loadEventlistener('default')
+  init();
+  loadEventlistener('default');
 }
 
 

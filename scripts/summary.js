@@ -3,9 +3,9 @@
  * Initializes the "Add Task" view.
  */
 function initSummary() {
- init(),
- loadSummary(), 
- loadNumberofTasks()
+ init();
+ loadSummary();
+ loadNumberofTasks();
 }
 
 
@@ -13,7 +13,7 @@ function initSummary() {
  * Loads and displays various task summaries on the summary page.
  */
 async function loadNumberofTasks(){
-    await loadFirebaseData('tasks')
+    await loadFirebaseData('tasks');
     loadSumAllTasks();
     loadSumOfEachTask();
     loadUrgentTasks();

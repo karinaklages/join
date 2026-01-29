@@ -12,10 +12,8 @@ function goToSignup() {
 
 
 /**
- * Logs in a guest user:
- * Stores a default guest user object in localStorage.
- * Flags a mobile greeting to show.
- * Redirects to the summary page.
+ * Logs in a guest user.
+ * Stores a default guest user object in localStorage. Flags a mobile greeting to show. Redirects to the summary page.
  */
 function guestLogin() {
   let guestUser = {
@@ -31,6 +29,7 @@ function guestLogin() {
 
 /**
  * Toggles the visibility of a password input field and updates the associated icon. Does nothing if the input is empty.
+ * 
  * @param {HTMLInputElement} passwordInput - The password input field to toggle.
  * @param {HTMLImageElement} toggleIcon - The icon element that indicates visibility state.
  */
@@ -48,6 +47,7 @@ function toggleVisibilityState(passwordInput, toggleIcon) {
 
 /**
  * Updates the visibility icon and input type based on password input value.
+ * 
  * @param {HTMLInputElement} passwordInput - The password input field.
  * @param {HTMLImageElement} toggleIcon - The icon element to update.
  */
@@ -70,6 +70,7 @@ function handlePasswordInput(passwordInput, toggleIcon) {
 /**
  * Sets up password visibility toggle functionality for a given input and icon.
  * Updates the icon and input type on input changes. Toggles visibility when the icon is clicked.
+ * 
  * @param {string} passwordId - The ID of the password input field.
  * @param {string} toggleIconId - The ID of the toggle icon element.
  */
@@ -99,10 +100,7 @@ setupPasswordToggle(
 
 /**
  * Handles user login.
- * Retrieves email and password from input fields.
- * Fails gracefully if either input is missing.
- * Attempts to process the login asynchronously.
- * Logs an error if the login process fails.
+ * Retrieves email and password from input fields. Fails gracefully if either input is missing. Attempts to process the login asynchronously. Logs an error if the login process fails.
  */
 async function login() {
   let { email, password } = getLoginInputs();
@@ -119,10 +117,8 @@ async function login() {
 
 /**
  * Processes user login by validating credentials against stored users.
- * Fetches the list of users asynchronously.
- * Finds a user matching the given email and password.
- * Calls `handleLoginSuccess` if a match is found.
- * Calls `handleLoginFail` if no match is found or database is empty.
+ * Fetches the list of users asynchronously. Finds a user matching the given email and password. Calls `handleLoginSuccess` if a match is found. Calls `handleLoginFail` if no match is found or database is empty.
+ * 
  * @param {string} email - The email input from the user.
  * @param {string} password - The password input from the user.
  */
@@ -142,6 +138,7 @@ async function processLogin(email, password) {
 
 /**
  * Retrieves the current values of the login input fields.
+ * 
  * @returns {Object} An object containing:
  * - email: The value of the email input field.
  * - password: The value of the password input field.
@@ -156,7 +153,7 @@ function getLoginInputs() {
 
 /**
  * Fetches all users from the backend asynchronously.
- * @async
+ * 
  * @returns {Promise<Object|null>} A JSON object containing all users, or null if the fetch fails.
  */
 async function fetchUsers() {
@@ -171,10 +168,11 @@ async function fetchUsers() {
 
 /**
  * Finds a user object from the response that matches the given email and password.
+ * 
  * @param {Object} usersResponse - The object containing all users from the backend.
  * @param {string} email - The email to match.
  * @param {string} password - The password to match.
- * @returns {Object|null} The matching user object if found, otherwise null.
+ * @returns {Object|null} - The matching user object if found, otherwise null.
  */
 function findUserByCredentials(usersResponse, email, password) {
   for (let key in usersResponse) {
@@ -189,9 +187,8 @@ function findUserByCredentials(usersResponse, email, password) {
 
 /**
  * Handles a successful login:
- * Stores the active user in localStorage.
- * Flags mobile greeting display.
- * Redirects the user to the summary page.
+ * Stores the active user in localStorage. Flags mobile greeting display. Redirects the user to the summary page.
+ * 
  * @param {Object} user - The user object returned from the backend.
  */
 function handleLoginSuccess(user) {
@@ -223,8 +220,7 @@ function handleLoginFail() {
 
 /**
  * Resets the login error state:
- * Removes error styling from email and password input fields if present.
- * Hides the login error message element.
+ * Removes error styling from email and password input fields if present. Hides the login error message element.
  */
 function resetLoginError() {
   let emailInput = document.getElementById("auth_input_mail");
@@ -242,9 +238,8 @@ function resetLoginError() {
 
 /**
  * Returns the initials of a given name.
- * If the name has only one word, returns the first letter.
- * If the name has multiple words, returns the first letters of the first two words.
- * Converts initials to uppercase.
+ * If the name has only one word, returns the first letter. If the name has multiple words, returns the first letters of the first two words. Converts initials to uppercase.
+ * 
  * @param {string} name - The full name of the user.
  * @returns {string} - The initials of the name.
  */

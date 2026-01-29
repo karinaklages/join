@@ -399,6 +399,14 @@ textarea:focus {
     padding-left: 12px;
 }
 
+#id_icon_urgent_task_task_detail,
+#id_icon_medium_task_task_detail,
+#id_icon_low_task_task_detail {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
 /* SCROLL BAR SMALL */
 
 .dropdown_list_contacts_task_detail_edit::-webkit-scrollbar {

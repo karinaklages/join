@@ -75,6 +75,7 @@
 
     .close_btn_container_task_detail_edit {
         position: absolute;
+        width: fit-content;
         top: 15px;
         right: 20px;
     }

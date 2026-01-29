@@ -241,6 +241,9 @@ input[type="date"]:-ms-input-placeholder {
 
 .urgent_btn_filled {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #f175fa;
     color: white;
     border: none;
@@ -254,6 +257,9 @@ input[type="date"]:-ms-input-placeholder {
 
 .medium_btn_filled {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #b279f5;
     color: white;
     border: none;
@@ -267,6 +273,9 @@ input[type="date"]:-ms-input-placeholder {
 
 .low_btn_filled {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1fd7c1;
     color: white;
     border: none;
@@ -276,6 +285,17 @@ input[type="date"]:-ms-input-placeholder {
     font-weight: 600;
     cursor: pointer;
     gap: 8px;
+}
+
+#id_icon_urgent_task_default,
+#id_icon_medium_task_default,
+#id_icon_low_task_default,
+#id_icon_urgent_task_overlay,
+#id_icon_medium_task_overlay,
+#id_icon_low_task_overlay {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
 
 /* BOTTOM AREA */

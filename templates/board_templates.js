@@ -21,7 +21,7 @@ function taskListElementTemplate(taskID, index) {
       </div>    
       <div class="order_elements_user_icon_priolable"> 
         <div id="board_assignee_${taskID}" class="order_user_icons_task_card"></div>
-        <img id="icon_priority_${taskID}" src="" alt="">
+        <img class="prio_icon_size" id="icon_priority_${taskID}" src="" alt="">
       </div>
     </div>
   `;

@@ -8,7 +8,7 @@ function taskDetailTemplate(taskContent, taskID, taskIndex) {
       <div class="scroll_container">
         <span id="task_detail_title_${taskID}" class="task_detail_title">${taskContent.title}</span>
         <p id="task_detail_description_${taskID}" class="task_detail_description">${taskContent.description}</p>   
-        <table class="recommender_table" aria-label="Page and Recipe Recommender details">
+        <table class="recommender_table">
           <tbody>
             <tr>
             <th scope="row" class="task_detail_description table_spacer">Due Date:</th>
@@ -17,7 +17,7 @@ function taskDetailTemplate(taskContent, taskID, taskIndex) {
             <tr>
             <th scope="row" class="task_detail_description table_spacer">Priority:</th>
             <td class="task_detail_description table_spacer_prio icon_gap">${taskContent.priority.name.charAt(0).toUpperCase() + taskContent.priority.name.slice(1)}
-              <img src="./assets/img/prio_${taskContent.priority.name}_${taskContent.priority.color}.svg" alt="Prio Urgent">
+              <img class="prio_icon_size" src="./assets/img/prio_${taskContent.priority.name}_${taskContent.priority.color}.svg" alt="Prio Urgent">
             </td>
             </tr>
             <tr>

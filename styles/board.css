@@ -213,6 +213,12 @@
   align-items: center;
 }
 
+.prio_icon_size {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
 .user_circle_task_card {
   display: flex;
   align-items: center;

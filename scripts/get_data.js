@@ -57,10 +57,10 @@ function getAllSubtasks() {
   let subtasks = {};
   document.querySelectorAll('.list_element').forEach(li => {
     let subtaskId = crypto.randomUUID();
-    let subtastText = li.querySelector('.subtask_text').textContent.trim();
+    let subtaskText = li.querySelector('.subtask_text').textContent.trim();
     subtasks[subtaskId] = {
-      text: subtastText,
-      done: false
+      text: subtaskText,
+      done: false,
     };
   });
   if (Object.keys(subtasks).length === 0) {
@@ -140,7 +140,7 @@ async function switchTaskData(titleTask = "", descriptionTask = "", dueDateTask 
     "category": categoryTask,
     "subtasks": subtasksTask,
     "statusTask": statusTask,
-  }
+  };
   if (HTMLid === 'task_detail') {
     await putToStorage("tasks", taskData, elements = '', HTMLid, taskID);
   } else {
@@ -223,7 +223,7 @@ function getSubtaskEditTask() {
       let subtaskId = crypto.randomUUID();
       subtasks[subtaskId] = {
         text: subtaskText,
-        done: false
+        done: false,
       };
     }
   });

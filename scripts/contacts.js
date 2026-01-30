@@ -203,22 +203,42 @@ async function getContactListData() {
 
 
 /**
- * Renders the local contact list in the DOM, organized alphabetically by first name.
- * Groups contacts by their first letter and adds separator headers for each letter group.
+ * Renders the contact list in the HTML element with ID 'contact_list'.
+ * This function clears the container before rendering, so it fully re-renders the contact list each time it is called.
  */
 function renderLocalContactList() {
     const container = document.getElementById('contact_list');
     container.innerHTML = "";
     let currentLetter = "";
     for (let i = 0; i < contactsArray.length; i++) {
-        const firstName = contactsArray[i].name.split(" ")[0];
-        const firstLetter = firstName[0].toUpperCase();
+        const initials = getContactInitials(contactsArray[i].name);
+        const firstLetter = initials[0];
         if (firstLetter !== currentLetter) {
             currentLetter = firstLetter;
             container.innerHTML += contactSeperatorTemplate(currentLetter);
         }
-        container.innerHTML += loadContactListItem(contactsArray[i]);
+        container.innerHTML += loadContactListItem({
+            ...contactsArray[i],
+            initials: initials
+        });
     }
+}
+
+
+/**
+ * Returns the initials of a contact's name.
+ * Only the first letter of the first two words is used. If the name has fewer than two words, only available initials are returned.
+ * 
+ * @param {string} name - The full name of the contact.
+ * @returns {string} - The uppercase initials of the first two words.
+ */
+function getContactInitials(name) {
+    if (!name) return "";
+    const parts = name.split(" ");
+    return parts
+        .slice(0, 2)
+        .map(part => part[0].toUpperCase())
+        .join("");
 }
 
 
@@ -386,12 +406,12 @@ function deleteOnMobile() {
  */
 async function deleteContactFromFirebase(contactID) {
     try {
-        let userStorage = await fetch(BASE_URL + "contacts/" + contactID + ".json", {
+        await fetch(BASE_URL + "contacts/" + contactID + ".json", {
             method: "DELETE",
         });
     } catch (error) {
         console.error("Fehler beim Updaten:", error);
-    }
+    };
 }
 
 

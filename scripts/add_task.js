@@ -267,6 +267,7 @@ function loadEventlistener(HTMLid) {
         if (HTMLid === "overlay") {
           loadContentBoard();
         }
+        window.location.href = "board.html";
       } else {
         highlightRequiredFields(HTMLid);
       }

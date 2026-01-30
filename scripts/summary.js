@@ -1,4 +1,3 @@
-
 /**
  * Initializes the "Add Task" view.
  */
@@ -34,30 +33,32 @@ function loadSumAllTasks(){
 /**
  * Loads and displays the number of tasks for each status category.
  */
-function loadSumOfEachTask(){
-let status = ['todo', 'done', 'inProgress', 'awaitFeedback'];
+function loadSumOfEachTask() {
+    let status = ['todo', 'done', 'inProgress', 'awaitFeedback'];
     status.forEach(statusElement => {
         let numberStatusTask = 0;
         taskList.forEach(taskElement => {
-            if(statusElement == taskElement.task.statusTask)
-            numberStatusTask ++;
-        })    
-        let taskHTMLElement = document.getElementById('id_summary_'+ statusElement);
+            if(statusElement == taskElement.task.statusTask) {
+                numberStatusTask++;
+            }
+        });
+        let taskHTMLElement = document.getElementById('id_summary_' + statusElement);
         taskHTMLElement.innerHTML = numberStatusTask;
         numberStatusTask = 0;
-    })
+    });
 }
 
 
 /**
  * Loads and displays the number of urgent tasks.
  */
-function loadUrgentTasks(){
+function loadUrgentTasks() {
     let sumUrgentTasks = 0;
     taskList.forEach(taskElement => {
-        if (taskElement.task.priority.name == 'urgent')
-            sumUrgentTasks++
-    })
+        if (taskElement.task.priority.name == 'urgent') {
+            sumUrgentTasks++;
+        }
+    });
     let taskHTMLElement = document.getElementById("id_summary_urgent");
     taskHTMLElement.innerHTML = sumUrgentTasks;
 }

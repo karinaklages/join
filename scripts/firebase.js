@@ -11,15 +11,13 @@ async function postToStorage(path, Data, elements = "", HTMLid) {
     try {
         let userStorage = await fetch(BASE_URL + path + ".json", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(Data),
         });
     } catch (error) {
         console.error("Fehler beim Updaten:", error);
     }
-    checkClearElements(path, elements, HTMLid)
+    checkClearElements(path, elements, HTMLid);
 }
 
 
@@ -36,9 +34,7 @@ async function putToStorage(path, Data, elements = '', HTMLid, taskID) {
     try {
         let userStorage = await fetch(BASE_URL + path + "/" + taskID + ".json", {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(Data),
         });
     } catch (error) {
@@ -70,9 +66,7 @@ function checkClearElements(path, elements, HTMLid) {
  * @param {Object} elements - An object containing input elements to clear.
  */
 function clearElements(elements) {
-    Object.values(elements).forEach(element => {
-        element.value = ""
-    });
+    Object.values(elements).forEach(element => { element.value = ""; });
 }
 
 
@@ -85,6 +79,7 @@ async function loadFirebaseData(path) {
     try {
         let responseFirebaseData = await fetch(BASE_URL + path + ".json");
         let responseFirebaseDataToJSON = await responseFirebaseData.json();
+        if (!responseFirebaseDataToJSON) return;
         let firebaseKeys = Object.keys(responseFirebaseDataToJSON);
         await checkPushToArray(firebaseKeys, responseFirebaseDataToJSON, path);
     } catch (error) {
@@ -121,12 +116,10 @@ async function checkPushToArray(firebaseKeys, responseFirebaseDataToJSON, path) 
 async function pushToContactsArray(firebaseKeys, responseFirebaseDataToJSON) {
     contactsList = [];
     for (let index = 0; index < firebaseKeys.length; index++) {
-        contactsList.push(
-            {
-                "id": firebaseKeys[index],
-                "contact": responseFirebaseDataToJSON[firebaseKeys[index]],
-            }
-        )
+        contactsList.push({
+            "id": firebaseKeys[index],
+            "contact": responseFirebaseDataToJSON[firebaseKeys[index]],
+        });
     }
 }
 
@@ -140,12 +133,10 @@ async function pushToContactsArray(firebaseKeys, responseFirebaseDataToJSON) {
 async function pushToTaskArray(firebaseKeys, responseFirebaseDataToJSON) {
     taskList = [];
     for (let index = 0; index < firebaseKeys.length; index++) {
-        taskList.push(
-            {
-                "id": firebaseKeys[index],
-                "task": responseFirebaseDataToJSON[firebaseKeys[index]],
-            }
-        )
+        taskList.push({
+            "id": firebaseKeys[index],
+            "task": responseFirebaseDataToJSON[firebaseKeys[index]],
+        });
     }
 }
 
@@ -160,12 +151,10 @@ async function pushToTaskArray(firebaseKeys, responseFirebaseDataToJSON) {
 async function pushToUserArray(firebaseKeys, responseFirebaseDataToJSON) {
     userList = [];
     for (let index = 0; index < firebaseKeys.length; index++) {
-        userList.push(
-            {
-                "id": firebaseKeys[index],
-                "user": responseFirebaseDataToJSON[firebaseKeys[index]],
-            }
-        )
+        userList.push({
+            "id": firebaseKeys[index],
+            "user": responseFirebaseDataToJSON[firebaseKeys[index]],
+        });
     }
 }
 
@@ -198,7 +187,7 @@ async function deleteTaskFromFirebase(taskID, path) {
  */
 async function deleteAssigneeInTaskList(assigneeID, path, taskID) {
     try {
-        let userstorage = await fetch(BASE_URL + path + taskID + "/assignees/" + assigneeID + ".json", {
+        let userstorage = await fetch(BASE_URL + path + "/" + taskID + "/assignees/" + assigneeID + ".json", {
             method: "DELETE",
         });
     } catch (error) {
@@ -219,11 +208,9 @@ async function deleteAssigneeInTaskList(assigneeID, path, taskID) {
  */
 async function updateSubtaskStatus(subtaskId, taskID, statusSubtask, taskIndex, taskContent) {
     try {
-        let userStorage = await fetch(BASE_URL + "tasks/" + taskID + "/" + "subtasks/" + subtaskId + "/done.json", {
+        let userStorage = await fetch(BASE_URL + "tasks/" + taskID + "/subtasks/" + subtaskId + "/done.json", {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(statusSubtask),
         });
     } catch (error) {
@@ -243,9 +230,7 @@ async function updateTaskStatus(category) {
     try {
         let taskElement = await fetch(BASE_URL + "tasks/" + currentDraggedElementID + "/statusTask.json", {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(category),
         });
     } catch (error) {

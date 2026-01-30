@@ -44,167 +44,167 @@
   <div class="order_sidebar_main">
     <aside class="sidebar desktop" id="id_sidebar"></aside>
     <div class = "nav_main_content">
-    <nav class="nav_bar" id="id_navbar"></nav>
-    <main class="margin_left margin_top content_wrapper_sidebar">
-      <section class="order_header_board">
-        <div class="board_mobile_header">
-          <h1>Board</h1>
-          <button class="btn_add_task_board_mobile button" onclick="openAddTaskDialog('todo')"><img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
-        </div>
-        <div class="order_header_right_side">
-          <div class="style_searchbar_board">
-            <input class="style_input_searchbar" type="text" placeholder="Find Task" onkeyup="filterTasks()">
-            <div class="border_searchbar"></div>
-            <div class="style_search_icon_box">
-              <img class="style_search_icon" src="./assets/img/search.svg" alt="">
+      <nav class="nav_bar" id="id_navbar"></nav>
+      <main class="margin_left margin_top content_wrapper_sidebar">
+        <section class="order_header_board">
+          <div class="board_mobile_header">
+            <h1>Board</h1>
+            <button class="btn_add_task_board_mobile button" onclick="openAddTaskDialog('todo')"><img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
+          </div>
+          <div class="order_header_right_side">
+            <div class="style_searchbar_board">
+              <input class="style_input_searchbar" type="text" placeholder="Find Task" onkeyup="filterTasks()">
+              <div class="border_searchbar"></div>
+              <div class="style_search_icon_box">
+                <img class="style_search_icon" src="./assets/img/search.svg" alt="">
+              </div>
+              <div id="searchMsg" class="search_error_message"></div>
             </div>
-            <div id="searchMsg" class="search_error_message"></div>
+            <button class="btn_add_task_board button" onclick="openAddTaskDialog('todo')">Add Task<img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
           </div>
-          <button class="btn_add_task_board button" onclick="openAddTaskDialog('todo')">Add Task<img class="icon_add_btn" src="./assets/img/add_white.svg" alt=""></button>
-        </div>
-      </section> 
-      
-      <section class="order_board_sections">
-        <div class="order_elements_in_section">
-          <div class="order_elements_in_section_header">
-            <p class="text_section">To Do</p>
-            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('todo')" role="button" aria-label="Add Task">
-          </div>
-          <div class="width_section" ondrop="drop('todo'); removeHighlight('todo')" ondragover="allowDrop(event); highlight('todo')" ondragleave="removeHighlight('todo')">
-            <div class="no_task_available" id="board_column_todo" data-initialized= "false">
-              <p>No tasks in To Do</p>
+        </section> 
+        
+        <section class="order_board_sections">
+          <div class="order_elements_in_section">
+            <div class="order_elements_in_section_header">
+              <p class="text_section">To Do</p>
+              <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('todo')" role="button" aria-label="Add Task">
             </div>
-          </div>
-        </div>
-        <div class="order_elements_in_section">
-          <div class="order_elements_in_section_header">
-            <p class="text_section">In Progress</p>
-            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('inProgress')" role="button" aria-label="Add Task">
-          </div>
-          <div class="width_section" ondrop="drop('inProgress'); removeHighlight('inProgress')" ondragover="allowDrop(event); highlight('inProgress')" ondragleave="removeHighlight('inProgress')">
-            <div class="no_task_available" id="board_column_inProgress" data-initialized= "false">
-              <p>No tasks in Progress</p>
-            </div>
-          </div>                                   
-        </div> 
-        <div class="order_elements_in_section">
-          <div class="order_elements_in_section_header">
-            <p class="text_section">Await Feedback</p>
-            <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('awaitFeedback')" role="button" aria-label="Add Task">
-          </div>
-          <div class="width_section" ondrop="drop('awaitFeedback'); removeHighlight('awaitFeedback')" ondragover="allowDrop(event); highlight('awaitFeedback')" ondragleave="removeHighlight('awaitFeedback')">
-            <div class="no_task_available" id="board_column_awaitFeedback" data-initialized= "false">
-              <p>No tasks in Await Feedback</p>
+            <div class="width_section" ondrop="drop('todo'); removeHighlight('todo')" ondragover="allowDrop(event); highlight('todo')" ondragleave="removeHighlight('todo')">
+              <div class="no_task_available" id="board_column_todo" data-initialized= "false">
+                <p>No tasks in To Do</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="order_elements_in_section">
-          <p class="text_section">Done</p>
-          <div class="width_section" ondrop="drop('done'); removeHighlight('done')" ondragover="allowDrop(event); highlight('done')" ondragleave="removeHighlight('done')">
-            <div class="no_task_available" id="board_column_done" data-initialized= "false">
-              <p>No tasks in Done</p>
-            </div>  
-          </div>                           
-        </div>
-      </section>
-    </main>
-    <footer id="mobile_footer"></footer>
+          <div class="order_elements_in_section">
+            <div class="order_elements_in_section_header">
+              <p class="text_section">In Progress</p>
+              <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('inProgress')" role="button" aria-label="Add Task">
+            </div>
+            <div class="width_section" ondrop="drop('inProgress'); removeHighlight('inProgress')" ondragover="allowDrop(event); highlight('inProgress')" ondragleave="removeHighlight('inProgress')">
+              <div class="no_task_available" id="board_column_inProgress" data-initialized= "false">
+                <p>No tasks in Progress</p>
+              </div>
+            </div>                                   
+          </div> 
+          <div class="order_elements_in_section">
+            <div class="order_elements_in_section_header">
+              <p class="text_section">Await Feedback</p>
+              <img class="img_add_btn" src="./assets/img/add_square_default.svg" alt="Add Task Button" onclick="openAddTaskDialog('awaitFeedback')" role="button" aria-label="Add Task">
+            </div>
+            <div class="width_section" ondrop="drop('awaitFeedback'); removeHighlight('awaitFeedback')" ondragover="allowDrop(event); highlight('awaitFeedback')" ondragleave="removeHighlight('awaitFeedback')">
+              <div class="no_task_available" id="board_column_awaitFeedback" data-initialized= "false">
+                <p>No tasks in Await Feedback</p>
+              </div>
+            </div>
+          </div>
+          <div class="order_elements_in_section">
+            <p class="text_section">Done</p>
+            <div class="width_section" ondrop="drop('done'); removeHighlight('done')" ondragover="allowDrop(event); highlight('done')" ondragleave="removeHighlight('done')">
+              <div class="no_task_available" id="board_column_done" data-initialized= "false">
+                <p>No tasks in Done</p>
+              </div>  
+            </div>                           
+          </div>
+        </section>
+      </main>
+      <footer id="mobile_footer"></footer>
 
-        <dialog class="dialog_add_task_container overlay_switch" id="addTaskDialog">
-          <main class="dialog_layout">
-            <form class="add_task_overlay_wrapper content_wrapper dialog_form" id="addTaskForm" novalidate>
-              <div class="close_btn_container no_scroll">
-                <img class="close_btn" src="./assets/img/x.svg" alt="Close Button" onclick="closeAddTaskDialog('overlay')" role="button" aria-label="Close Dialog">
-              </div>    
-              <div>
-                <h1>Add Task</h1>
-              </div>
-              <div class="add_task_form_container add_task_form_container_scroll">
-                <section class="formfield_left">
-                  <div class="formfield_left_wrapper">
-                    <label for="id_title_add_task_overlay" class="label_text">Title<sup>*</sup></label><br>
-                    <input type="text" class="add_task_input styled_input validate_required" id="id_title_add_task_overlay" placeholder="Enter a title" oninput="handleRequiredMessage(this); limitInputLength(this, 30)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
-                    <span class="required_message" data-for="id_title_add_task_overlay">This field is required</span><br>
-                  </div>
-                  <label for="id_description_add_task_overlay" class="label_text">Description</label><br>
-                  <textarea class="add_task_description styled_input_description" id="id_description_add_task_overlay" placeholder="Enter a description" oninput="limitInputLength(this, 90)"></textarea><br>
-                  <div class="formfield_left_wrapper">
-                    <label for="id_due_date_add_task_overlay" class="label_text">Due Date<sup>*</sup></label><br>
-                    <input type="date" class="add_task_input styled_input validate_required" id="id_due_date_add_task_overlay" oninput="handleRequiredMessage(this)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
-                    <span class="required_message" data-for="id_due_date_add_task_overlay">This field is required</span><br>
-                  </div>
-                </section>
-                <div class="vertical_line"></div>
-                <section class="formfield_right">
-                  <label class="label_text">Priority</label><br>
-                  <div class="priority_options">
-                    <button type="button" class="urgent_btn_default" id="id_urgent_btn_overlay" onclick="checkPriority('urgent', 'overlay')">Urgent
-                      <img id ="id_icon_urgent_task_overlay" src="./assets/img/prio_urgent_red.svg" alt="Priority Urgent">
-                    </button>
-                    <button type="button" class="medium_btn_filled" id="id_medium_btn_overlay" onclick="checkPriority('medium', 'overlay')">Medium
-                      <img id ="id_icon_medium_task_overlay" class="icon hover" src="./assets/img/prio_medium_white.svg" alt="Priority Medium Hover">
-                    </button>
-                    <button type="button" class="low_btn_default" id="id_low_btn_overlay" onclick="checkPriority('low', 'overlay')">Low
-                      <img id ="id_icon_low_task_overlay" src="./assets/img/prio_low_green.svg" alt="Priority Low">
-                    </button>
-                  </div>
-                  <label class="label_text">Assigned to</label><br>
-                  <div class="dropdown" data-type="contacts">
-                    <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('contacts', 'overlay')">
-                      <span class="dropdown_text" id="selected_contacts_overlay">Select contacts to assign</span>
-                      <div class="dropdown_icon"></div>
-                    </div>
-                    <ul class="dropdown_list_contacts dropdown_list_contacts_task_detail_edit" id="contacts_list_task_overlay" style="display:none;">
-                    </ul>
-                  </div>
-                  <div class="assigned_contacts_row" id="assigned_contacts_row_overlay"></div>
-                  <div class="input_spacer"></div>
-                  <label class="label_text">Category<sup>*</sup></label><br>
-                  <div class="dropdown" data-type="category">
-                    <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('category', 'overlay')">
-                      <span class="dropdown_text" id="selected_category_overlay">Select task category</span>
-                      <div class="dropdown_icon"></div>
-                    </div>
-                    <ul class="dropdown_list" id="category_list_task_overlay" style="display:none;">
-                      <li class="dropdown_item" onclick="selectCategory(this, 'overlay')">Technical Task</li>
-                      <li class="dropdown_item" onclick="selectCategory(this, 'overlay')">User Story</li>
-                    </ul>
-                  </div>
-                  <div class="input_spacer"></div>
-                  <section class="subtask_wrapper">
-                    <label for="subtasks" class="label_text">Subtasks</label><br>
-                    <div class="input_container">
-                      <input type="text" id="subtasks" class="add_task_input styled_input" placeholder="Add new subtask" oninput="limitInputLength(this, 20)">
-                      <div class="subtask_actions">
-                        <button class="subtask_btn" type="button" onclick="cancelSubtask()">
-                          <img class="cancel_subtask" src="./assets/img/close.svg" alt="Cancel Subtask">
-                        </button>
-                        <div class="subtask_divider"></div>
-                        <button class="subtask_btn" type="button" onclick="addSubtask()">
-                          <img class="submit_subtask" src="./assets/img/check.svg" alt="Submit Subtask">
-                        </button>
-                      </div>
-                    </div>
-                    <ul id="subtaskList"></ul>
-                  </section>
-                  <p class="required_mobile"><sup>*</sup>This field is required</p> 
-                </section>
-              </div>
-              <div class="add_task_bottom_area no_scroll">
-                <div class="required_desktop">
-                  <p><sup>*</sup>This field is required</p>
+      <dialog class="dialog_add_task_container overlay_switch" id="addTaskDialog">
+        <main class="dialog_layout">
+          <form class="add_task_overlay_wrapper content_wrapper dialog_form" id="addTaskForm" novalidate>
+            <div class="close_btn_container no_scroll">
+              <img class="close_btn" src="./assets/img/x.svg" alt="Close Button" onclick="closeAddTaskDialog('overlay')" role="button" aria-label="Close Dialog">
+            </div>    
+            <div>
+              <h1>Add Task</h1>
+            </div>
+            <div class="add_task_form_container add_task_form_container_scroll">
+              <section class="formfield_left">
+                <div class="formfield_left_wrapper">
+                  <label for="id_title_add_task_overlay" class="label_text">Title<sup>*</sup></label><br>
+                  <input type="text" class="add_task_input styled_input validate_required" id="id_title_add_task_overlay" placeholder="Enter a title" oninput="handleRequiredMessage(this); limitInputLength(this, 30)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
+                  <span class="required_message" data-for="id_title_add_task_overlay">This field is required</span><br>
                 </div>
-                <div class="add_task_btn_area">
-                  <button type="button" class="clear_btn" onclick="clearInputs('overlay')">Clear
-                    <img class="icon default" src="./assets/img/close.svg" alt="Clear Formular">
-                    <img class="icon hover" src="./assets/img/close_blue.svg" alt="Clear Formular Hover">
+                <label for="id_description_add_task_overlay" class="label_text">Description</label><br>
+                <textarea class="add_task_description styled_input_description" id="id_description_add_task_overlay" placeholder="Enter a description" oninput="limitInputLength(this, 90)"></textarea><br>
+                <div class="formfield_left_wrapper">
+                  <label for="id_due_date_add_task_overlay" class="label_text">Due Date<sup>*</sup></label><br>
+                  <input type="date" class="add_task_input styled_input validate_required" id="id_due_date_add_task_overlay" oninput="handleRequiredMessage(this)" onfocus="handleRequiredMessage(this)" onblur="handleRequiredMessage(this)"><br>
+                  <span class="required_message" data-for="id_due_date_add_task_overlay">This field is required</span><br>
+                </div>
+              </section>
+              <div class="vertical_line"></div>
+              <section class="formfield_right">
+                <label class="label_text">Priority</label><br>
+                <div class="priority_options">
+                  <button type="button" class="urgent_btn_default" id="id_urgent_btn_overlay" onclick="checkPriority('urgent', 'overlay')">Urgent
+                    <img id ="id_icon_urgent_task_overlay" src="./assets/img/prio_urgent_red.svg" alt="Priority Urgent">
                   </button>
-                  <button type="submit" id="id_btn_create_task_overlay" class="create_task_btn">Create Task<img src="./assets/img/check_white.svg" alt="Create Task"></button>
+                  <button type="button" class="medium_btn_filled" id="id_medium_btn_overlay" onclick="checkPriority('medium', 'overlay')">Medium
+                    <img id ="id_icon_medium_task_overlay" class="icon hover" src="./assets/img/prio_medium_white.svg" alt="Priority Medium Hover">
+                  </button>
+                  <button type="button" class="low_btn_default" id="id_low_btn_overlay" onclick="checkPriority('low', 'overlay')">Low
+                    <img id ="id_icon_low_task_overlay" src="./assets/img/prio_low_green.svg" alt="Priority Low">
+                  </button>
                 </div>
+                <label class="label_text">Assigned to</label><br>
+                <div class="dropdown" data-type="contacts">
+                  <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('contacts', 'overlay')">
+                    <span class="dropdown_text" id="selected_contacts_overlay">Select contacts to assign</span>
+                    <div class="dropdown_icon"></div>
+                  </div>
+                  <ul class="dropdown_list_contacts dropdown_list_contacts_task_detail_edit" id="contacts_list_task_overlay" style="display:none;">
+                  </ul>
+                </div>
+                <div class="assigned_contacts_row" id="assigned_contacts_row_overlay"></div>
+                <div class="input_spacer"></div>
+                <label class="label_text">Category<sup>*</sup></label><br>
+                <div class="dropdown" data-type="category">
+                  <div class="dropdown_input add_task_input_dropdown styled_input" onclick="toggleListTasks('category', 'overlay')">
+                    <span class="dropdown_text" id="selected_category_overlay">Select task category</span>
+                    <div class="dropdown_icon"></div>
+                  </div>
+                  <ul class="dropdown_list" id="category_list_task_overlay" style="display:none;">
+                    <li class="dropdown_item" onclick="selectCategory(this, 'overlay')">Technical Task</li>
+                    <li class="dropdown_item" onclick="selectCategory(this, 'overlay')">User Story</li>
+                  </ul>
+                </div>
+                <div class="input_spacer"></div>
+                <section class="subtask_wrapper">
+                  <label for="subtasks" class="label_text">Subtasks</label><br>
+                  <div class="input_container">
+                    <input type="text" id="subtasks" class="add_task_input styled_input" placeholder="Add new subtask" oninput="limitInputLength(this, 20)">
+                    <div class="subtask_actions">
+                      <button class="subtask_btn" type="button" onclick="cancelSubtask()">
+                        <img class="cancel_subtask" src="./assets/img/close.svg" alt="Cancel Subtask">
+                      </button>
+                      <div class="subtask_divider"></div>
+                      <button class="subtask_btn" type="button" onclick="addSubtask()">
+                        <img class="submit_subtask" src="./assets/img/check.svg" alt="Submit Subtask">
+                      </button>
+                    </div>
+                  </div>
+                  <ul id="subtaskList"></ul>
+                </section>
+                <p class="required_mobile"><sup>*</sup>This field is required</p> 
+              </section>
+            </div>
+            <div class="add_task_bottom_area no_scroll">
+              <div class="required_desktop">
+                <p><sup>*</sup>This field is required</p>
               </div>
-            </form>
-          </main>
-        </dialog>
+              <div class="add_task_btn_area">
+                <button type="button" class="clear_btn" onclick="clearInputs('overlay')">Clear
+                  <img class="icon default" src="./assets/img/close.svg" alt="Clear Formular">
+                  <img class="icon hover" src="./assets/img/close_blue.svg" alt="Clear Formular Hover">
+                </button>
+                <button type="submit" id="id_btn_create_task_overlay" class="create_task_btn">Create Task<img src="./assets/img/check_white.svg" alt="Create Task"></button>
+              </div>
+            </div>
+          </form>
+        </main>
+      </dialog>
       <dialog class="dialog_task_detail_container" id="taskDetailDialog"></dialog>
       <dialog class="dialog_task_detail_edit_container" id="taskDetailEditDialog"></dialog>
     </div>

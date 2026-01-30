@@ -188,6 +188,7 @@ function areRequiredEditFieldsFilled() {
 function highlightRequiredEditFields() {
   const titleEdit = document.getElementById('id_title_task_detail_edit');
   const dueDateEdit = document.getElementById('id_due_date_task_detail_edit');
+  const categorySpan = document.getElementById('selected_category_task_detail_edit');
   titleEdit.value.trim() === ""
     ? (titleEdit.classList.add('error'),
       document.querySelector('.required_message[data-for="id_title_task_detail_edit"]').style.display = "block")

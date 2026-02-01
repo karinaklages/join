@@ -92,15 +92,10 @@ function getAssignee() {
         assigneeName: name,
         assigneeInitial: initial,
         assigneeColor: color,
-      }
+      };
     }
-  })
-  if (Object.keys(selectedAssignees).length === 0) {
-    selectedAssignees = "";
-    return selectedAssignees;
-  } else {
-    return selectedAssignees;
-  }
+  });
+  return selectedAssignees;
 }
 
 

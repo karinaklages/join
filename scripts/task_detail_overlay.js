@@ -50,15 +50,15 @@ function closeTaskDetailDialog() {
  * @param {string|number} taskID - The unique ID of the task.
  */
 function loadAssigneesTaskDetails(taskContent, taskID) {
-  let taskAssigneeElement = document.getElementById("assignees_task_details_" + taskID);
-  let assigneeList = taskContent.assignees;
-  Object.values(assigneeList)
-    .forEach(assignee => {
-      let assigneeHTMLElement = document.createElement('div');
-      assigneeHTMLElement.className = "user_info";
-      assigneeHTMLElement.innerHTML = AssigneesTaskDetailsTemplate(assignee);
-      taskAssigneeElement.appendChild(assigneeHTMLElement);
-    })
+  const taskAssigneeElement = document.getElementById("assignees_task_details_" + taskID);
+  if (!taskAssigneeElement) return;
+  const assigneeList = taskContent.assignees ?? {};
+  Object.values(assigneeList).forEach(assignee => {
+    const assigneeHTMLElement = document.createElement('div');
+    assigneeHTMLElement.className = "user_info";
+    assigneeHTMLElement.innerHTML = AssigneesTaskDetailsTemplate(assignee);
+    taskAssigneeElement.appendChild(assigneeHTMLElement);
+  });
 }
 
 

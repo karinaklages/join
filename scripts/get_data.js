@@ -80,22 +80,18 @@ function getAllSubtasks() {
  * @returns {Object|string} The selected assignees object or "" if no assignees are selected.
  */
 function getAssignee() {
-  let selectedAssignees = {};
-  document.querySelectorAll('.dropdown_item_user').forEach(listElement => {
-    const validDataChecked = listElement.querySelector('.checkbox_icon');
-    if (validDataChecked.dataset.checked === 'true') {
-      const name = listElement.querySelector('.user_name_assignee_circle').textContent.trim();
-      const initial = listElement.querySelector('.contact_initial_circle').textContent.trim();
-      const color = listElement.querySelector('.contact_initial_circle').style.backgroundColor;
-      const id = listElement.dataset.assigneeId;
-      selectedAssignees[id] = {
-        assigneeName: name,
-        assigneeInitial: initial,
-        assigneeColor: color,
-      };
-    }
+  if (selectedAssignees.length === 0) {
+    return "";
+  }
+  let assigneesToSave = {};
+  selectedAssignees.forEach((item) => {
+    assigneesToSave[item.id] = {
+      assigneeName: item.contact.name,
+      assigneeInitial: item.contact.initial,
+      assigneeColor: item.contact.color,
+    };
   });
-  return selectedAssignees;
+  return assigneesToSave;
 }
 
 

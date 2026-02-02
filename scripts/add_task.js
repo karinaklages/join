@@ -89,10 +89,10 @@ function resetInputFields(HTMLid) {
  * @param {string} dialogId - The dialog identifier
  */
 function clearSelectedAssigneesByDialog(HTMLid) {
-  if (HTMLid === "default") {
-    selectedAssignees = [];
-  } else {
+   if (HTMLid === "edit" || HTMLid === "task_detail_edit") {
     selectedAssigneesEdit = [];
+  } else {
+    selectedAssignees = [];
   }
   document
     .querySelectorAll(`#contacts_list_task_${HTMLid} .checkbox_icon`)

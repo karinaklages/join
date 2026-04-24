@@ -8,16 +8,18 @@
 Join is part of the Developer Akademie's training programme for software developers (www.developerakademie.com). 
 <br><br>
 
+[Live View](https://join.karina-klages.de)</p>
+
 ###
 
 ![Join](./assets/img/join-1.jpg)<br>
 
-![Join](./assets/img/join-2-b.jpg)<br>
+![Join](./assets/img/join-2.jpg)<br>
 
-![Join](./assets/img/join-3-b.jpg)<br>
+![Join](./assets/img/join-3.jpg)<br>
 
-![Join](./assets/img/join-4-b.jpg)<br>
+![Join](./assets/img/join-4.jpg)<br>
 
-![Join](./assets/img/join-5-b.jpg)<br>
+![Join](./assets/img/join-5.jpg)<br>
 
-![Join](./assets/img/join-6-b.jpg)
+![Join](./assets/img/join-6.jpg)
